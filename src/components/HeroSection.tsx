@@ -28,11 +28,11 @@ const HeroSection = () => {
             <span className="text-xs font-medium text-primary">Agencia de Marketing en Asturias </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-6">
-            Domina Google.{" "}
-            <span className="gradient-text">Escala tu SaaS</span>{" "}
-            con tráfico orgánico que convierte.
-          </h1>
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-6 text-[#ebf2f7]">
+  Domina Google.{" "}
+  <span className="gradient-text">Escala tu Saas</span>{" "}
+  con tráfico orgánico que convierte.
+</h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
             Ayudamos a las empresas a multiplicar su ventas con estrategias SEO basadas en datos, PPC de alto rendimiento y contenido que posiciona.
