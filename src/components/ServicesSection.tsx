@@ -83,9 +83,7 @@ const ServicesSection = () => (
         className="text-center mb-16"
       >
         <span className="text-sm font-medium text-primary tracking-widest uppercase">Servicios</span>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3">
-          Todo lo que necesitas para <span className="gradient-text">dominar los rankings</span>
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]"> Todo lo que necesitas para<span className="gradient-text">dominar los rankings</span></h2>
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-6">
