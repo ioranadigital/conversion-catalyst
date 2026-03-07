@@ -25,7 +25,7 @@ const HeroSection = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-8">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs font-medium text-primary">Agencia SEO para SaaS</span>
+            <span className="text-xs font-medium text-primary">Agencia de Marketing en Asturias </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-6">
@@ -35,8 +35,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-            Ayudamos a startups de SaaS a multiplicar su adquisición de clientes con estrategias SEO
-            basadas en datos, PPC de alto rendimiento y contenido que posiciona.
+            Ayudamos a las empresas a multiplicar su ventas con estrategias SEO basadas en datos, PPC de alto rendimiento y contenido que posiciona.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
