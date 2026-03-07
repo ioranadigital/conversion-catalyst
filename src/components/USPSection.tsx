@@ -29,9 +29,9 @@ const USPSection = () => (
         className="text-center mb-16"
       >
         <span className="text-sm font-medium text-primary tracking-widest uppercase">¿Por qué Orbital?</span>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3">
-          La agencia SEO que piensa como <span className="gradient-text">tu co-founder</span>
-        </h2>
+    <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]">
+  La agencia SEO que piensa como <span className="gradient-text">tu co-founder</span>
+</h2>
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-6">
