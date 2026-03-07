@@ -41,9 +41,7 @@ const CasesSection = () => (
         className="text-center mb-16"
       >
         <span className="text-sm font-medium text-primary tracking-widest uppercase">Casos de Éxito</span>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3">
-          Resultados que hablan <span className="gradient-text">por sí solos</span>
-        </h2>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]"> Resultados que hablan  <span className="gradient-text">por sí solos</span></h2>
       </motion.div>
 
       <div className="grid lg:grid-cols-3 gap-6">
