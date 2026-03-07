@@ -34,8 +34,10 @@ const ContactSection = () => {
         >
           <span className="text-sm font-medium text-primary tracking-widest uppercase">Contacto</span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3">
-            ¿Listo para escalar tu <span className="gradient-text">SaaS</span>?
+          <span className="gradient-text">SaaS</span>?
           </h2>
+                      <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]">   ¿Listo para contarnos tu  <span className="gradient-text">proyecto?</span></h2>
+
           <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
             Agenda una consultoría gratuita de 30 minutos. Analizaremos tu situación actual y te daremos
             un plan accionable — sin compromiso.
