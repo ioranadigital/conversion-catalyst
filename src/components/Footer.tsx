@@ -8,8 +8,8 @@ const Footer = () => (
         © {new Date().getFullYear()} Orbital SEO. Todos los derechos reservados.
       </div>
       <div className="flex gap-6 text-sm text-muted-foreground">
-        <a href="#" className="hover:text-primary transition-colors">Privacidad</a>
-        <a href="#" className="hover:text-primary transition-colors">Términos</a>
+        <Link to="/privacidad" className="hover:text-primary transition-colors">Privacidad</Link>
+          <Link to="/privacidad" className="hover:text-primary transition-colors">Términos</Link>
       </div>
     </div>
   </footer>
