@@ -35,6 +35,42 @@ const services = [
       "Link building con outreach personalizado",
     ],
   },
+
+ {
+    icon: Search,
+    title: "SEO Técnico & On-Page",
+    benefit: "Posiciona donde tu ICP busca soluciones",
+    desc: "Optimizamos cada rincón de tu sitio para que Google te encuentre primero y tus visitantes conviertan más.",
+    features: [
+      "Auditoría técnica completa y roadmap de mejoras",
+      "Keyword research con intent mapping para SaaS",
+      "Optimización de landing pages y arquitectura web",
+    ],
+  },
+  {
+    icon: MousePointerClick,
+    title: "PPC & Paid Search",
+    benefit: "Tráfico de alta intención desde el día 1",
+    desc: "Campañas en Google Ads diseñadas para captar leads cualificados mientras tu SEO crece orgánicamente.",
+    features: [
+      "Campañas de Search, Display y YouTube Ads",
+      "Optimización de CPA y ROAS en tiempo real",
+      "A/B testing de copies y landing pages",
+    ],
+  },
+  {
+    icon: PenTool,
+    title: "Content Marketing",
+    benefit: "Contenido que educa, posiciona y vende",
+    desc: "Creamos contenido estratégico que atrae a tu buyer persona y lo guía a través de tu funnel de conversión.",
+    features: [
+      "Estrategia de contenido basada en topic clusters",
+      "Artículos, guías y whitepapers optimizados",
+      "Link building con outreach personalizado",
+    ],
+  },
+
+  
 ];
 
 const ServicesSection = () => (
