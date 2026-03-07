@@ -152,8 +152,13 @@
     @apply py-20 md:py-28 px-4 md:px-8;
   }
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-emerald-300 to-primary;
-  }
+  /* Usamos un degradado de naranja brillante a naranja suave */
+  background: linear-gradient(90deg, #f97316 0%, #fb923c 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
 }
 
 @layer utilities {
