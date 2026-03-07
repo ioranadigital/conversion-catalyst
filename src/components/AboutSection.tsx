@@ -18,9 +18,8 @@ const AboutSection = () => (
           viewport={{ once: true }}
         >
           <span className="text-sm font-medium text-primary tracking-widest uppercase">Nosotros</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 mb-6">
-            Obsesionados con el crecimiento de <span className="gradient-text">tu SaaS</span>
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]"> Obsesionados con el crecimiento de <span className="gradient-text">tu empresa</span></h2>
+
           <p className="text-muted-foreground leading-relaxed mb-4">
             Orbital SEO nació de la frustración de ver startups brillantes con productos increíbles
             que nadie encontraba en Google. Nos propusimos cambiar eso.
