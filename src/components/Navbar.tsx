@@ -25,8 +25,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container flex items-center justify-between h-16">
         <a href="#hero" onClick={() => scrollTo("#hero")} className="font-heading text-xl font-bold tracking-tight">
-          <span className="neon-text">Orbital</span>{" "}
-          <span className="text-foreground">SEO</span>
+          <span className="neon-text">IORANA</span>{" "}
+          <span className="text-foreground">Digital</span>
         </a>
 
         {/* Desktop */}
