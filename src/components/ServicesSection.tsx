@@ -105,7 +105,7 @@ const ServicesSection = () => (
             </div>
                       
             <div className="text-xs font-semibold text-[#ebf2f7]/70 uppercase tracking-wider mb-2">{s.benefit}</div>
-            <h3 className="text-xl text-[#ebf2f7] font-heading font-semibold mb-3">{s.title}</h3>
+            <h3 className="text-xl text-[#f97316] font-heading font-semibold mb-3">{s.title}</h3>
             <p className="text-[#ebf2f7]/80 mb-6 leading-relaxed">{s.desc}</p>
             <ul className="space-y-3 mt-auto">
               {s.features.map((f) => (
