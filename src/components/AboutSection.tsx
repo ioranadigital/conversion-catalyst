@@ -39,7 +39,7 @@ const AboutSection = () => (
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-               className="flex items-start gap-4 p-6 rounded-2xl bg-[#98b1c8] border border-[#ebf2f7]/20 shadow-xl transition-all duration-300 hover:border-[#ebf2f7]/50 hover:-translate-y-1 group"
+                className="glass-card overflow-hidden group hover:neon-border transition-all duration-500 flex flex-col"
               >
                 <v.icon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                 <div>
