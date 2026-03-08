@@ -135,10 +135,14 @@
 @layer components {
 /* Para los números (+250%, 3x, 50+) */
 .neon-text {
-  color: hsl(var(--primary));
-  /* Aumentamos el radio y la intensidad del brillo */
-  text-shadow: 0 0 12px rgba(255, 100, 0, 0.7), 
-               0 0 25px rgba(255, 100, 0, 0.4); 
+  /* Color base: Blanco Hielo */
+  color: #ebf2f7;  
+  /* Capas de brillo blanco para efecto neón */
+  text-shadow: 
+    0 0 7px rgba(235, 242, 247, 0.8),   /* Brillo interno fuerte */
+    0 0 15px rgba(235, 242, 247, 0.5),  /* Brillo medio */
+    0 0 25px rgba(235, 242, 247, 0.2);  /* Resplandor suave exterior */
+  font-weight: 800; /* Un grosor alto ayuda a que el brillo se note más */
 }
 
 /* Para el borde de las tarjetas en USPSection.tsx */
