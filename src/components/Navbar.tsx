@@ -33,10 +33,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((l) => (
             <button
-              key={l.href}
-              onClick={() => scrollTo(l.href)}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
+    key={l.href}
+    onClick={() => scrollTo(l.href)}
+    {/* NUEVO COLOR: text-[#ebf2f7] */}
+    className="text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium"
+  >
               {l.label}
             </button>
           ))}
@@ -46,9 +47,9 @@ const Navbar = () => {
         </div>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <button className="md:hidden text-[#ebf2f7]" onClick={() => setOpen(!open)}>
+  {open ? <X size={24} /> : <Menu size={24} />}
+</button>
       </div>
 
       {/* Mobile menu */}
