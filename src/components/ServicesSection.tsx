@@ -96,7 +96,7 @@ const ServicesSection = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
             // Fondo tarjetas y hover
-            className="bg-white/10 backdrop-blur-md p-8 group hover:bg-[#24496b] hover:border-white/40 hover:shadow-[0_0_30px_rgba(68,109,146,0.3)] transition-all duration-500 flex flex-col rounded-2xl border border-white/10"
+            className="bg-white/10 backdrop-blur-md p-8 group hover:bg-[#0a2b49] hover:border-white/40 hover:shadow-[0_0_30px_rgba(68,109,146,0.3)] transition-all duration-500 flex flex-col rounded-2xl border border-white/10"
           >
             
             {/* color Logo */}
