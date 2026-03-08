@@ -133,13 +133,20 @@
 }
 
 @layer components {
- .neon-text {
+/* Para los números (+250%, 3x, 50+) */
+.neon-text {
   color: hsl(var(--primary));
-  text-shadow: 0 0 20px rgba(249, 115, 22, 0.5); /* Color naranja */
+  /* Aumentamos el radio y la intensidad del brillo */
+  text-shadow: 0 0 12px rgba(255, 100, 0, 0.7), 
+               0 0 25px rgba(255, 100, 0, 0.4); 
 }
+
+/* Para el borde de las tarjetas en USPSection.tsx */
 .neon-border:hover {
-  border-color: hsl(var(--primary) / 0.5);
-  box-shadow: 0 0 30px rgba(249, 115, 22, 0.4); /* Color naranja */
+  border-color: hsl(var(--primary));
+  /* Sombra más densa y extendida */
+  box-shadow: 0 0 35px -5px rgba(255, 100, 0, 0.6);
+  transition: all 0.4s ease-out;
 }
   .neon-border-strong {
     @apply border-primary;
