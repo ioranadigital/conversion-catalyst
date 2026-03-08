@@ -161,9 +161,14 @@
     @apply border-primary;
     box-shadow: var(--neon-glow-strong);
   }
-  .glass-card {
-    @apply bg-card/60 backdrop-blur-xl border border-border rounded-xl;
-  }
+.glass-card {
+  /* NUEVO: El borde blanco sutil constante */
+  border: 1px solid rgba(235, 242, 247, 0.15); /* Blanco hielo al 15% de opacidad */
+  /* Otras propiedades que ya deberías tener */
+  border-radius: 1rem; /* rounded-2xl */
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
   .section-padding {
     @apply py-20 md:py-28 px-4 md:px-8;
   }
