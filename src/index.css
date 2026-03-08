@@ -133,14 +133,14 @@
 }
 
 @layer components {
-  .neon-text {
-    @apply text-primary;
-    text-shadow: 0 0 10px hsl(142 70% 50% / 0.5), 0 0 30px hsl(142 70% 50% / 0.2);
-  }
-  .neon-border {
-    @apply border-primary/40;
-    box-shadow: var(--neon-glow);
-  }
+ .neon-text {
+  color: hsl(var(--primary));
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.5); /* Color naranja */
+}
+.neon-border:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.4); /* Color naranja */
+}
   .neon-border-strong {
     @apply border-primary;
     box-shadow: var(--neon-glow-strong);
