@@ -5,8 +5,9 @@ const Footer = () => (
         <span className="neon-text">IORANA</span> Digital</div>
       <div className="text-sm text-muted-foreground">
         © {new Date().getFullYear()} IORANA Digital. Todos los derechos reservados.
-      </div>
-      <div className="flex gap-6 text-sm text-muted-foreground">
+        <div className="flex gap-6 text-sm text-muted-foreground">
+        <a href="#" className="hover:text-primary transition-colors">Privacidad</a>
+        <a href="#" className="hover:text-primary transition-colors">Términos</a>
       </div>
     </div>
   </footer>
