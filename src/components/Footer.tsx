@@ -5,15 +5,6 @@ const Footer = () => (
         <span className="neon-text">IORANA</span>
         <span className="text-foreground">Digital</span>
       </div>
-
-      <div className="container flex items-center justify-between h-16">
-        <a href="#hero" onClick={() => scrollTo("#hero")} className="font-heading text-xl font-bold tracking-tight">
-          <span className="neon-text">IORANA</span>{" "}
-          <span className="text-foreground">Digital</span>
-        </a>
-
-      
-      
       <div className="text-sm text-muted-foreground">
         © {new Date().getFullYear()} IORANA Digital. Todos los derechos reservados.
       </div> {/* <-- Faltaba este cierre */}
