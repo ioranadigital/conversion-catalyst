@@ -30,30 +30,26 @@ const AboutSection = () => (
             Por eso cada estrategia que diseñamos está conectada directamente con tus objetivos de revenue.
           </p>
 
-        {/* 3. Reemplaza el bloque del grid completo */}
-<div className="grid grid-cols-2 gap-4">
-  {values.map((v, i) => (
-    <motion.div
-      key={v.label}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: i * 0.1 }}
-      className="flex items-start gap-4 p-6 rounded-2xl bg-[#0a2b49] border border-[#ebf2f7]/20 shadow-xl transition-all duration-300 hover:border-[#ebf2f7]/50 hover:-translate-y-1 group"
-    >
-      <v.icon className="h-6 w-6 text-[#ebf2f7] mt-0.5 shrink-0 transition-transform group-hover:scale-110 duration-300" />
 
-      <div>
-        <div className="font-bold text-base text-[#ebf2f7] mb-1 tracking-tight">
-          {v.label}
-        </div>
-        <div className="text-[#ebf2f7]/70 text-sm leading-relaxed">
-          {v.desc}
-        </div>
-      </div>
-    </motion.div>
-  ))}
-</div>
+  <div className="grid grid-cols-2 gap-4">
+            {values.map((v, i) => (
+              <motion.div
+                key={v.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex items-start gap-3 p-4 rounded-lg bg-secondary/50"
+              >
+                <v.icon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                <div>
+                  <div className="font-semibold text-sm">{v.label}</div>
+                  <div className="text-[#ebf2f7]/70 text-sm leading-relaxed">{v.desc}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, x: 30 }}
