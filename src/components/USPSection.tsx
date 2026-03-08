@@ -45,7 +45,7 @@ const USPSection = () => (
             className="glass-card p-8 hover:neon-border transition-all duration-500"S
           >
             {/* color Logo */}
-           <div className="w-12 h-12 rounded-lg bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(235,242,247,0.1)]">
+           <div className="w-12 h-12 rounded-lg bg-[#f97316]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(235,242,247,0.1)]">
           <p.icon className="h-6 w-6 text-[#ebf2f7]" /> {/* Dcolor icocno */}
             </div>
             {/* Dentro del map de pillars en USPSection.tsx */}
