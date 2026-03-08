@@ -74,7 +74,7 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="servicios" className="section-padding bg-secondary/30">
+  <section id="servicios" className="section-padding bg-background relative overflow-hidden">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
