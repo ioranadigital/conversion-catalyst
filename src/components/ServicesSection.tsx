@@ -96,9 +96,13 @@ const ServicesSection = () => (
             transition={{ delay: i * 0.15 }}
             className="glass-card p-8 group hover:neon-border transition-all duration-500 flex flex-col"
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-              <s.icon className="h-6 w-6 text-primary" />
+            
+            {/* color Logo */}
+            <div className="w-12 h-12 rounded-lg bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(235,242,247,0.1)]">
+              <s.icon className="h-6 w-6 text-[#ebf2f7]" /> {/* Dcolor icocno */}
             </div>
+
+                      
             <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">{s.benefit}</div>
             <h3 className="text-xl font-heading font-semibold mb-3">{s.title}</h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">{s.desc}</p>
