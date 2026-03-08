@@ -31,15 +31,15 @@ const Navbar = () => {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-6">
-          {navLinks.map((l) => (
-  <button
-    key={l.href}
-    onClick={() => scrollTo(l.href)}
-    className="text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium"
-  >
-    {l.label}
-  </button>
-))}
+  {navLinks.map((l) => (
+    <button
+      key={l.href}
+      onClick={() => scrollTo(l.href)}
+      className="text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium"
+    >
+      {l.label}
+    </button>
+  ))}
           <Button 
   size="sm" 
   onClick={() => scrollTo("#contacto")}
