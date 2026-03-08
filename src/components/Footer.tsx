@@ -4,7 +4,7 @@ const Footer = () => (
       <div className="font-heading text-lg font-bold">
         <span className="neon-text">IORANA</span> Digital</div>
       <div className="text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Orbital SEO. Todos los derechos reservados.
+        © {new Date().getFullYear()} IORANA Digital. Todos los derechos reservados.
       </div>
       <div className="flex gap-6 text-sm text-muted-foreground">
       </div>
