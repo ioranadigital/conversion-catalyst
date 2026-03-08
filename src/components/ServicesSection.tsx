@@ -103,12 +103,12 @@ const ServicesSection = () => (
               <s.icon className="h-6 w-6 text-[#ebf2f7]" /> {/* Dcolor icocno */}
             </div>
                       
-            <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">{s.benefit}</div>
-            <h3 className="text-xl font-heading font-semibold mb-3">{s.title}</h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">{s.desc}</p>
+            <div className="text-xs font-semibold text-[#ebf2f7]/70 uppercase tracking-wider mb-2">{s.benefit}</div>
+            <h3 className="text-xl text-[#ebf2f7] font-heading font-semibold mb-3">{s.title}</h3>
+            <p className="text-[#ebf2f7]/80 mb-6 leading-relaxed">{s.desc}</p>
             <ul className="space-y-3 mt-auto">
               {s.features.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-sm text-secondary-foreground">
+                <li key={f} className="flex items-start gap-2 text-sm text-[#ebf2f7]/90">
                   <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                   {f}
                 </li>
