@@ -145,12 +145,17 @@
   font-weight: 800; /* Un grosor alto ayuda a que el brillo se note más */
 }
 
-/* Para el borde de las tarjetas en USPSection.tsx */
+/* En src/index.css */
 .neon-border:hover {
-  border-color: hsl(var(--primary));
-  /* Sombra más densa y extendida */
-  box-shadow: 0 0 35px -5px rgba(255, 100, 0, 0.6);
-  transition: all 0.4s ease-out;
+  /* Borde en blanco hielo con 50% de opacidad */
+  border-color: rgba(235, 242, 247, 0.5);  
+  /* Resplandor blanco difuminado */
+  box-shadow: 
+    0 0 25px rgba(235, 242, 247, 0.3), 
+    0 0 50px rgba(235, 242, 247, 0.1);    
+  background-color: rgba(235, 242, 247, 0.03); /* Un toque muy leve de luz al fondo de la card */
+  transition: all 0.4s ease-in-out;
+  transform: translateY(-4px); /* Sutil elevación para dar dinamismo */
 }
   .neon-border-strong {
     @apply border-primary;
