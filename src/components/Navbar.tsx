@@ -53,7 +53,6 @@ const Navbar = () => {
   {open ? <X size={24} /> : <Menu size={24} />}
 </button>
       </div>
-
       {/* Mobile menu */}
       <AnimatePresence>
         {open && (
