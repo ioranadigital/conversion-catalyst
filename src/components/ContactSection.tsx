@@ -48,7 +48,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="md:col-span-2 space-y-6"
           >
-            <div className="glass-card p-6">
+          <div className="bg-[#0a2b49] p-6 rounded-2xl border border-[#ebf2f7]/20 shadow-lg">
               <Mail className="h-5 w-5 text-primary mb-3" />
               <div className="font-semibold text-sm">Email</div>
               <div className="text-muted-foreground text-sm mt-1">hola@orbitalseo.com</div>
