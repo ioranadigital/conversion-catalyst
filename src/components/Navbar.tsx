@@ -35,7 +35,6 @@ const Navbar = () => {
   <button
     key={l.href}
     onClick={() => scrollTo(l.href)}
-    // El comentario debe ir aquí afuera si lo necesitas
     className="text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium"
   >
     {l.label}
