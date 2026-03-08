@@ -41,10 +41,13 @@ const Navbar = () => {
     {l.label}
   </button>
 ))}
-          <Button size="sm" onClick={() => scrollTo("#contacto")}>
-            Agendar Consultoría
-          </Button>
-        </div>
+          <Button 
+  size="sm" 
+  onClick={() => scrollTo("#contacto")}
+  className="bg-[#ebf2f7] text-[#0a2b49] font-bold hover:bg-[#ebf2f7]/90 transition-all shadow-md"
+>
+  Agendar Consultoría
+</Button>
 
         {/* Mobile toggle */}
         <button className="md:hidden text-[#ebf2f7]" onClick={() => setOpen(!open)}>
