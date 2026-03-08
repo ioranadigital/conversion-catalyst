@@ -95,14 +95,13 @@ const ServicesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="glass-card p-8 group hover:neon-border transition-all duration-500 flex flex-col"
+           className="glass-card p-8 group hover:bg-[#446d92] hover:border-[#ebf2f7]/40 hover:shadow-[0_0_30px_rgba(68,109,146,0.4)] transition-all duration-500 flex flex-col"
           >
             
             {/* color Logo */}
             <div className="w-12 h-12 rounded-lg bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(235,242,247,0.1)]">
               <s.icon className="h-6 w-6 text-[#ebf2f7]" /> {/* Dcolor icocno */}
             </div>
-
                       
             <div className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">{s.benefit}</div>
             <h3 className="text-xl font-heading font-semibold mb-3">{s.title}</h3>
