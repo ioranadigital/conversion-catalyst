@@ -32,15 +32,15 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((l) => (
-            <button
+  <button
     key={l.href}
     onClick={() => scrollTo(l.href)}
-    {/* NUEVO COLOR: text-[#ebf2f7] */}
+    // El comentario debe ir aquí afuera si lo necesitas
     className="text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium"
   >
-              {l.label}
-            </button>
-          ))}
+    {l.label}
+  </button>
+))}
           <Button size="sm" onClick={() => scrollTo("#contacto")}>
             Agendar Consultoría
           </Button>
