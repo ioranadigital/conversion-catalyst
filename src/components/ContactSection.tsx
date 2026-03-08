@@ -60,24 +60,37 @@ const ContactSection = () => {
   </div>
           </motion.div>
 
-          <motion.form
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            onSubmit={handleSubmit}
-            className="md:col-span-3 glass-card p-8 space-y-5"
-          >
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Input placeholder="Nombre" required className="bg-muted/50 border-border" />
-              <Input placeholder="Email" type="email" required className="bg-muted/50 border-border" />
-            </div>
-            <Input placeholder="Empresa / SaaS" className="bg-muted/50 border-border" />
-            <Textarea placeholder="Cuéntanos sobre tu proyecto..." rows={4} className="bg-muted/50 border-border resize-none" />
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? "Enviando..." : "Agendar Consultoría Gratuita"}
-              <Send className="ml-2 h-4 w-4" />
-            </Button>
-          </motion.form>
+         <motion.form
+  className="md:col-span-3 bg-[#0a2b49] p-8 space-y-5 rounded-2xl border border-[#ebf2f7]/20 shadow-2xl"
+>
+  <div className="grid sm:grid-cols-2 gap-4">
+    <Input 
+      placeholder="Nombre" 
+      className="bg-[#0a2b49] border-[#ebf2f7]/20 text-[#ebf2f7] placeholder:text-[#ebf2f7]/40 focus:border-[#ebf2f7]/50" 
+    />
+    <Input 
+      placeholder="Email" 
+      type="email" 
+      className="bg-[#0a2b49] border-[#ebf2f7]/20 text-[#ebf2f7] placeholder:text-[#ebf2f7]/40 focus:border-[#ebf2f7]/50" 
+    />
+  </div>
+  
+  <Input 
+    placeholder="Empresa / SaaS" 
+    className="bg-[#0a2b49] border-[#ebf2f7]/20 text-[#ebf2f7] placeholder:text-[#ebf2f7]/40 focus:border-[#ebf2f7]/50" 
+  />
+  
+  <Textarea 
+    placeholder="Cuéntanos sobre tu proyecto..." 
+    rows={4} 
+    className="bg-[#0a2b49] border-[#ebf2f7]/20 text-[#ebf2f7] placeholder:text-[#ebf2f7]/40 focus:border-[#ebf2f7]/50 resize-none" 
+  />
+
+  <Button className="w-full bg-[#ebf2f7] text-[#0a2b49] font-bold hover:bg-[#ebf2f7]/90 transition-all shadow-lg">
+    Agendar Consultoría Gratuita
+    <Send className="ml-2 h-4 w-4" />
+  </Button>
+</motion.form>
         </div>
       </div>
     </section>
