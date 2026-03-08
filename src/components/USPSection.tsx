@@ -47,8 +47,11 @@ const USPSection = () => (
             <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
               <p.icon className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="text-xl font-heading font-semibold mb-3">{p.title}</h3>
-            <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
+            {/* Dentro del map de pillars en USPSection.tsx */}
+           <h3 className="text-xl font-bold mb-3 text-[#ebf2f7]">
+           {p.title}
+           </h3>
+          <p className="text-[#ebf2f7]/70 leading-relaxed">  {p.desc}</p>
           </motion.div>
         ))}
       </div>
