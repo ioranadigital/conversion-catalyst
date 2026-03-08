@@ -75,13 +75,18 @@ const services = [
 
 const ServicesSection = () => (
   <section id="servicios" className="section-padding bg-[#24496b] relative overflow-hidden">
-    <div className="container">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
+     <div className="container">
+      // <motion.div
+      //   initial={{ opacity: 0, y: 20 }}
+      //    whileInView={{ opacity: 1, y: 0 }}
+       //   viewport={{ once: true }}
+       //   className="text-center mb-16"
+    //    >
+        // Busca el inicio de la card (motion.div)
+<motion.div
+  key={service.title}
+  className="bg-[#ebf2f7]/15 backdrop-blur-md p-8 rounded-2xl border border-[#ebf2f7]/25 hover:bg-[#ebf2f7]/20 hover:border-[#ebf2f7]/50 hover:shadow-[0_0_30px_rgba(235,242,247,0.2)] transition-all duration-500 group shadow-xl"
+>
         <span className="text-sm font-medium text-primary tracking-widest uppercase">Servicios</span>
         <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]"> Todo lo que necesitas para<span className="gradient-text">dominar los rankings</span></h2>
       </motion.div>
