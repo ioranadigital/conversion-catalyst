@@ -24,8 +24,8 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacto" className="section-padding bg-secondary/30">
-      <div className="container max-w-5xl">
+    <section id="contacto" className="section-padding bg-[#24496b] relative overflow-hidden">
+    <div className="container max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
