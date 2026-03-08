@@ -73,16 +73,16 @@ const CasesSection = () => (
 
               <div className="space-y-3 text-sm flex-1">
                 <div>
-                  <span className="text-primary font-semibold text-xs uppercase tracking-wider">Contexto</span>
-                  <p className="text-muted-foreground mt-1">{c.context}</p>
+                  <span className="text-[#ebf2f7] font-semibold text-xs uppercase tracking-wider">Contexto</span>
+                  <p className="text-[#ebf2f7]/80 mt-1">{c.context}</p>
                 </div>
                 <div>
-                  <span className="text-primary font-semibold text-xs uppercase tracking-wider">Desafío</span>
-                  <p className="text-muted-foreground mt-1">{c.challenge}</p>
+                  <span className="text-[#ebf2f7] font-semibold text-xs uppercase tracking-wider">Desafío</span>
+               <p className="text-[#ebf2f7]/80 mt-1">{c.challenge}</p>
                 </div>
                 <div>
-                  <span className="text-primary font-semibold text-xs uppercase tracking-wider">Solución</span>
-                  <p className="text-muted-foreground mt-1">{c.solution}</p>
+                 <span className="text-[#ebf2f7] font-semibold text-xs uppercase tracking-wider">Solución</span>
+                  <p className="text-[#ebf2f7]/80 mt-1">{c.solution}</p>
                 </div>
               </div>
             </div>
