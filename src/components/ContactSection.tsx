@@ -48,16 +48,21 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="md:col-span-2 space-y-6"
           >
-          <div className="bg-[#0a2b49] p-6 rounded-2xl border border-[#ebf2f7]/20 shadow-lg">
-              <Mail className="h-5 w-5 text-primary mb-3" />
-              <div className="font-semibold text-sm">Email</div>
-              <div className="text-muted-foreground text-sm mt-1">hola@orbitalseo.com</div>
-            </div>
-           <div className="bg-[#0a2b49] p-6 rounded-2xl border border-[#ebf2f7]/20 shadow-lg">
+         <div className="space-y-4">
+  {/* Tarjeta de Email */}
+  <div className="bg-[#0a2b49] p-6 rounded-2xl border border-[#ebf2f7]/20 shadow-lg">
+    <Mail className="h-5 w-5 text-[#ebf2f7] mb-3" />
+    <div className="font-bold text-[#ebf2f7]">Email</div>
+    <div className="text-[#ebf2f7]/70 text-sm mt-1">hola@orbitalseo.com</div>
+  </div>
+
+  {/* Tarjeta de Ubicación */}
+  <div className="bg-[#0a2b49] p-6 rounded-2xl border border-[#ebf2f7]/20 shadow-lg">
     <MapPin className="h-5 w-5 text-[#ebf2f7] mb-3" />
     <div className="font-bold text-[#ebf2f7]">Ubicación</div>
     <div className="text-[#ebf2f7]/70 text-sm mt-1">100% Remoto · Global</div>
   </div>
+</div>
           </motion.div>
 
          <motion.form
