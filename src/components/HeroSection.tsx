@@ -47,7 +47,6 @@ const HeroSection = () => {
   size="lg"
   variant="outline"
   onClick={() => document.querySelector("#casos")?.scrollIntoView({ behavior: "smooth" })}
-  {/* Actualizamos el borde sutil y el efecto de hover naranja sólido */}
   className="text-base px-8 border-[#ebf2f7]/30 text-[#ebf2f7] hover:bg-[#ff8c00] hover:text-[#0a2b49] hover:border-[#ff8c00] transition-all duration-300 shadow-lg"
 >
   Ver Casos de Éxito
