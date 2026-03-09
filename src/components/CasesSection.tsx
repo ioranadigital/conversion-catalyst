@@ -47,16 +47,16 @@ const CasesSection = () => (
   {cases.map((c, i) => (
     <motion.div
       key={c.company}
-      {/* ... animaciones y transiciones ... */}
+   
       className="flex flex-col rounded-3xl overflow-hidden border border-[#ebf2f7]/10 shadow-2xl group transition-all duration-500"
     >
-      {/* 1. SECCIÓN DE TÍTULO (Mantiene su estilo distintivo) */}
+    
       <div className="bg-[#ebf2f7]/5 p-8 border-b border-[#ebf2f7]/10">
         <div className="text-2xl font-bold text-[#ebf2f7] mb-1">{c.result}</div>
         <div className="text-xs text-[#ebf2f7]/60 tracking-wide uppercase">{c.resultSub}</div>
       </div>
 
-      {/* 2. CUERPO DEL CONTENEDOR (Fondo #0a2b49 y letras blancas) */}
+
       <div className="bg-[#0a2b49] p-8 flex-grow space-y-6">
         {/* Logo y Nombre del Cliente */}
         <div className="flex items-center gap-3">
@@ -69,7 +69,7 @@ const CasesSection = () => (
           </div>
         </div>
 
-        {/* Detalles en Blanco Hielo sutil */}
+
         <div className="space-y-4">
           <div className="text-sm text-[#ebf2f7]/80 leading-relaxed italic">
             "Implementamos una estrategia de topic clusters con +60 artículos optimizados para dominar el mercado de SaaS."
