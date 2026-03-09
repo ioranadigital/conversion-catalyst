@@ -41,11 +41,17 @@ const AboutSection = () => (
                 transition={{ delay: i * 0.1 }}
                 className="flex items-start gap-4 p-6 rounded-2xl bg-[#0a2b49] border border-[#ebf2f7]/20 shadow-xl transition-all duration-300 hover:border-[#ebf2f7]/50 hover:-translate-y-1 group"
               >
-                <v.icon className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                <div>
-                  <div className="font-semibold text-sm">{v.label}</div>
-                  <div className="text-[#ebf2f7]/70 text-sm leading-relaxed">{v.desc}</div>
-                </div>
+               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#0a2b49] border border-[#ebf2f7]/20 shadow-[0_0_15px_rgba(235,242,247,0.05)] mb-4 transition-all duration-300 group-hover:border-[#ebf2f7]/50 group-hover:shadow-[0_0_20px_rgba(235,242,247,0.15)]">
+  <v.icon className="h-6 w-6 text-[#ebf2f7] transition-transform duration-300 group-hover:scale-110" />
+</div>
+          <div>
+   <div className="font-bold text-base text-[#ff8c00] mb-1.5 tracking-tight group-hover:text-[#ffa500] transition-colors duration-300">
+    {v.label}
+  </div>
+  <div className="text-[#ebf2f7]/70 text-sm leading-relaxed">
+    {v.desc}
+  </div>
+</div>
               </motion.div>
             ))}
           </div>
