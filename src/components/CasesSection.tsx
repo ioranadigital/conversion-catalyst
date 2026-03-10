@@ -57,8 +57,8 @@ const CasesSection = () => (
             className="glass-card overflow-hidden group hover:neon-border transition-all duration-500 flex flex-col"
           >
             {/* Result badge */}
-            <div className="bg-primary/10 px-6 py-4 border-b border-border">
-              <div className="text-2xl font-heading font-bold neon-text">{c.result}</div>
+            <div className="bg-[#ebf2f7]/10 px-6 py-4 border-b border-[#ebf2f7]/20">
+              <div className="text-2xl font-heading font-bold text-[#ebf2f7]">{c.result}</div>
               <div className="text-xs text-muted-foreground mt-1">{c.resultSub}</div>
             </div>
 
