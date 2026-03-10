@@ -198,23 +198,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="section-padding">
-        <div className="container max-w-3xl text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7] mb-6">
-              ¿Listo para empezar?
-            </h2>
-            <p className="text-[#ebf2f7]/70 mb-8 max-w-xl mx-auto">
-              Agenda una consultoría gratuita y descubre cómo podemos ayudarte a alcanzar tus objetivos.
-            </p>
-            <Button size="lg" onClick={goToContact} className="group text-base px-8">
-              Agendar Consultoría Gratuita
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+      {/* CTA Final con Formulario */}
+      <ServiceContactForm />
     </>
   );
 };
