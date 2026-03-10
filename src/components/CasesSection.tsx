@@ -51,7 +51,7 @@ const CasesSection = () => {
   {cases.map((c, i) => (
     <motion.div
       key={c.company}
-      className="flex flex-col rounded-3xl overflow-hidden border border-[#ebf2f7]/10 bg-[#0a2b49] shadow-2xl group transition-all duration-500"
+      className="flex flex-col rounded-3xl overflow-hidden border border-[#ebf2f7]/10 bg-[#24496b] shadow-2xl group transition-all duration-500"
     >
       <div className="bg-[#ebf2f7]/5 p-8 border-b border-[#ebf2f7]/10">
         <div className="text-2xl font-bold text-[#ebf2f7] mb-1">{c.result}</div>
@@ -70,33 +70,35 @@ const CasesSection = () => {
           </div>
         </div>
 
-        <div className="space-y-4">
-          <div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-1 opacity-90">
-              Contexto
-            </div>
-            <p className="text-sm text-[#ebf2f7]/70 leading-relaxed">
-              {c.contexto}
-            </p>
-          </div>
+   <div className="space-y-6 mt-4">
+  <div>
+    <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-2 opacity-100">
+      Contexto
+    </div>
+    <p className="text-[13px] text-[#ebf2f7] leading-relaxed opacity-80">
+      {c.contexto}
+    </p>
+  </div>
 
-          <div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-1 opacity-90">
-              Desafío
-            </div>
-            <p className="text-sm text-[#ebf2f7]/70 leading-relaxed">
-              {c.desafio}
-            </p>
-          </div>
+  <div>
+    <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-2 opacity-100">
+      Desafío
+    </div>
+    <p className="text-[13px] text-[#ebf2f7] leading-relaxed opacity-80">
+      {c.desafio}
+    </p>
+  </div>
 
-          <div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-1 opacity-90">
-              Solución
-            </div>
-            <p className="text-sm text-[#ebf2f7]/70 leading-relaxed">
-              {c.solucion}
-            </p>
-          </div>
+  <div>
+    <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-2 opacity-100">
+      Solución
+    </div>
+    <p className="text-[13px] text-[#ebf2f7] leading-relaxed opacity-80">
+      {c.solucion}
+    </p>
+  </div>
+</div>
+        
         </div>
       </div>
     </motion.div>
