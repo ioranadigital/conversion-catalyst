@@ -42,6 +42,107 @@ interface ServicePageData {
   faqs: ServiceFAQ[];
 }
 
+const ServiceContactForm = () => {
+  const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
+  const [accepted, setAccepted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!accepted) {
+      toast({
+        title: "Debes aceptar los términos",
+        description: "Por favor, acepta los términos legales y la política de privacidad.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      toast({
+        title: "¡Mensaje enviado!",
+        description: "Nos pondremos en contacto contigo en menos de 24 horas.",
+      });
+      (e.target as HTMLFormElement).reset();
+      setAccepted(false);
+    }, 1000);
+  };
+
+  return (
+    <section className="section-padding">
+      <div className="container max-w-3xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7] mb-4">
+            ¿Tienes preguntas?
+          </h2>
+          <p className="text-[#ebf2f7]/70 max-w-2xl mx-auto leading-relaxed">
+            Estaremos encantados de responderlas. Contacta con nosotros y uno de nuestros expertos en marketing digital estudiará de primera mano tu caso para dar solución a los objetivos de tu empresa.
+          </p>
+        </motion.div>
+
+        <motion.form
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          onSubmit={handleSubmit}
+          className="bg-[#0a2b49] p-8 space-y-5 rounded-2xl border border-[#ebf2f7]/20 shadow-2xl max-w-xl mx-auto"
+        >
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Input
+              placeholder="Nombre"
+              required
+              className="bg-[#0a2b49] border-[#ebf2f7]/20 text-[#ebf2f7] placeholder:text-[#ebf2f7]/40 focus:border-[#ebf2f7]/50"
+            />
+            <Input
+              placeholder="Email"
+              type="email"
+              required
+              className="bg-[#0a2b49] border-[#ebf2f7]/20 text-[#ebf2f7] placeholder:text-[#ebf2f7]/40 focus:border-[#ebf2f7]/50"
+            />
+          </div>
+
+          <Input
+            placeholder="Empresa / SaaS"
+            className="bg-[#0a2b49] border-[#ebf2f7]/20 text-[#ebf2f7] placeholder:text-[#ebf2f7]/40 focus:border-[#ebf2f7]/50"
+          />
+
+          <Textarea
+            placeholder="Cuéntanos sobre tu proyecto..."
+            rows={4}
+            className="bg-[#0a2b49] border-[#ebf2f7]/20 text-[#ebf2f7] placeholder:text-[#ebf2f7]/40 focus:border-[#ebf2f7]/50 resize-none"
+          />
+
+          <Button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-[#ebf2f7] text-[#0a2b49] font-bold hover:bg-[#ebf2f7]/90 transition-all shadow-lg"
+          >
+            {loading ? "Enviando..." : "Enviar"}
+            <Send className="ml-2 h-4 w-4" />
+          </Button>
+
+          <div className="flex items-start gap-2">
+            <Checkbox
+              id="terms-service"
+              checked={accepted}
+              onCheckedChange={(v) => setAccepted(v === true)}
+              className="mt-0.5 border-[#ebf2f7]/30 data-[state=checked]:bg-[#ff8c00] data-[state=checked]:border-[#ff8c00]"
+            />
+            <label htmlFor="terms-service" className="text-xs text-[#ebf2f7]/60 leading-relaxed cursor-pointer">
+              He leído y acepto los{" "}
+              <Link to="/terminos" className="underline hover:text-[#ebf2f7]/90">Términos Legales</Link>{" "}
+              y la{" "}
+              <Link to="/privacidad" className="underline hover:text-[#ebf2f7]/90">Política de Privacidad</Link>
+            </label>
+          </div>
+        </motion.form>
+      </div>
+    </section>
+  );
+};
+
+
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   const navigate = useNavigate();
 
