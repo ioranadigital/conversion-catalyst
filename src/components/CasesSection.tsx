@@ -60,8 +60,7 @@ const CasesSection = () => {
 
 
       <div className="p-8 flex-grow space-y-6 bg-[#0a2b49]">
-        {/* Info del Cliente */}
-        <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full bg-[#ebf2f7]/10 flex items-center justify-center text-[#ebf2f7] font-bold border border-[#ebf2f7]/10">
             {c.company[0]}
           </div>
