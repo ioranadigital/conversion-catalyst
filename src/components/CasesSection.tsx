@@ -30,83 +30,76 @@ const cases = [
     resultSub: "en 4 meses · 8x ROI en contenido",
   },
 ];
+const CasesSection = () => {
+  return (
+    <section id="casos" className="section-padding bg-[#0a2b49] relative overflow-hidden">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          {/* Subtítulo en Naranja para resaltar */}
+          <span className="text-sm font-medium text-[#ff8c00] tracking-widest uppercase">
+            Casos de Éxito
+          </span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]">
+            Resultados que hablan <span className="text-[#ebf2f7]/60">por sí solos</span>
+          </h2>
+        </motion.div>
 
-const CasesSection = () => (
-  <section id="casos" className="section-padding bg-[#24496b] relative overflow-hidden">
-    <div className="container">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-16"
-      >
-        <span className="text-sm font-medium text-primary tracking-widest uppercase">Casos de Éxito</span>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3">
-          Resultados que hablan <span className="gradient-text">por sí solos</span>
-        </h2>
-      </motion.div>
-
-      <div className="grid lg:grid-cols-3 gap-6">
-        {cases.map((c, i) => (
-          <motion.div
-            key={c.company}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.15 }}
-            className="bg-[#0a2b49] rounded-2xl overflow-hidden group hover:border-[#ebf2f7]/30 transition-all duration-500 flex flex-col border border-[#ebf2f7]/10 shadow-2xl"
-          >
-            {/* Result badge */}
-            <div className="bg-[#ebf2f7]/10 px-6 py-4 border-b border-[#ebf2f7]/20">
-             <div className="text-2xl font-bold text-[#ebf2f7] mb-1">{c.result}</div>
-             <div className="text-xs text-[#ebf2f7]/60 tracking-wide uppercase">{c.resultSub}</div>
-            </div>
-
-            <div className="p-6 flex flex-col flex-1">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-xs font-bold text-primary">{c.company[0]}</span>
-                </div>
-                <div>
-                  <div className="font-semibold text-sm">{c.company}</div>
-                  <div className="text-xs text-muted-foreground">{c.industry}</div>
-                </div>
+        <div className="grid lg:grid-cols-3 gap-6">
+          {cases.map((c, i) => (
+            <motion.div
+              key={c.company}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              {/* Tarjeta con borde sutil para que no se pierda en el fondo */}
+              className="flex flex-col rounded-3xl overflow-hidden border border-[#ebf2f7]/10 bg-[#0a2b49] shadow-2xl group transition-all duration-500 hover:border-[#ebf2f7]/30"
+            >
+              {/* Encabezado de Métricas */}
+              <div className="bg-[#ebf2f7]/5 p-8 border-b border-[#ebf2f7]/10">
+                <div className="text-2xl font-bold text-[#ebf2f7] mb-1">{c.result}</div>
+                <div className="text-xs text-[#ebf2f7]/60 tracking-wide uppercase">{c.resultSub}</div>
               </div>
 
-             <div className="space-y-4">
-  <div>
-    <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-1 opacity-90">
-      Contexto
-    </div>
-    <p className="text-sm text-[#ebf2f7]/70 leading-relaxed font-light">
-      {c.contexto}
-    </p>
-  </div>
+              {/* Cuerpo de la Tarjeta */}
+              <div className="p-8 flex-grow space-y-6">
+                {/* Info Cliente */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#ebf2f7]/10 flex items-center justify-center text-[#ebf2f7] font-bold border border-[#ebf2f7]/10">
+                    {c.company[0]}
+                  </div>
+                  <div>
+                    <div className="font-bold text-[#ebf2f7]">{c.company}</div>
+                    <div className="text-[10px] text-[#ebf2f7]/50 uppercase tracking-widest">{c.industry}</div>
+                  </div>
+                </div>
 
-  <div>
-    <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-1 opacity-90">
-      Desafío
-    </div>
-    <p className="text-sm text-[#ebf2f7]/70 leading-relaxed font-light">
-      {c.desafio}
-    </p>
-  </div>
-
-  <div>
-    <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-1 opacity-90">
-      Solución
-    </div>
-    <p className="text-sm text-[#ebf2f7]/70 leading-relaxed font-light">
-      {c.solucion}
-    </p>
-  </div>
-</div>
-            </div>
-          </motion.div>
-        ))}
+                {/* Detalles: Contexto, Desafío, Solución en BLANCO */}
+                <div className="space-y-4">
+                  {['Contexto', 'Desafío', 'Solución'].map((label) => (
+                    <div key={label}>
+                      <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-1 opacity-90">
+                        {label}
+                      </div>
+                      <p className="text-sm text-[#ebf2f7]/70 leading-relaxed">
+                        {/* Aquí asumo que tus datos tienen c.contexto, c.desafio, etc. */}
+                        {c[label.toLowerCase() as keyof typeof c]}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default CasesSection;
