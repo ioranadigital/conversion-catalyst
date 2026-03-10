@@ -74,17 +74,21 @@ const CasesSection = () => {
                     <div className="text-[10px] text-[#ebf2f7]/50 uppercase tracking-widest">{c.industry}</div>
                   </div>
                 </div>
-
-                <div className="space-y-4">
-                  {['Contexto', 'Desafío', 'Solución'].map((label) => (
-                    <div key={label}>
-                      <div className="text-[10px] uppercase tracking-[0.2em] text-[#ebf2f7] font-bold mb-1 opacity-90">
-                        {label}
-                      </div>
-                      <p className="text-sm text-[#ebf2f7]/70 leading-relaxed">
-                        {c[label.toLowerCase() as keyof typeof c]}
-                      </p>
-                    </div>
+ <div className="space-y-3 text-sm flex-1">
+                <div>
+                  <span className="text-primary font-semibold text-xs uppercase tracking-wider">Contexto</span>
+                  <p className="text-muted-foreground mt-1">{c.context}</p>
+                </div>
+                <div>
+                  <span className="text-primary font-semibold text-xs uppercase tracking-wider">Desafío</span>
+                  <p className="text-muted-foreground mt-1">{c.challenge}</p>
+                </div>
+                <div>
+                  <span className="text-primary font-semibold text-xs uppercase tracking-wider">Solución</span>
+                  <p className="text-muted-foreground mt-1">{c.solution}</p>
+                </div>
+              </div>
+               
                   ))}
                 </div>
               </div>
