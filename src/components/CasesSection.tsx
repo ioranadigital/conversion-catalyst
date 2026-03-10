@@ -32,7 +32,7 @@ const cases = [
 
 const CasesSection = () => {
   return (
-    <section id="casos" className="section-padding bg-[#0a2b49] relative overflow-hidden">
+    <section id="casos" className="section-padding bg-[#24496b] relative overflow-hidden">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
