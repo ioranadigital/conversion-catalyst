@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useNavigate, Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 import {
   Accordion,
   AccordionContent,
