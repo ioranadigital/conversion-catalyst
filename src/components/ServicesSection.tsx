@@ -79,8 +79,8 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  /* Cambio a fondo marino #446d92 */
-  <section id="servicios" className="section-padding bg-[#446d92] relative overflow-hidden">
+  /* Cambio a fondo marino Toda la seccion */
+  <section id="servicios" className="section-padding bg-[#24496b] relative overflow-hidden">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
