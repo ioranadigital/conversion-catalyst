@@ -42,7 +42,7 @@ const USPSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="glass-card p-8 hover:neon-border transition-all duration-500"S
+            className="glass-card p-8 hover:neon-border transition-all duration-500"
           >
             {/* color Logo */}
            <div className="w-12 h-12 rounded-lg bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(235,242,247,0.1)]">
