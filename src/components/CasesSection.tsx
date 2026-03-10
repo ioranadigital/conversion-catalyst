@@ -40,13 +40,9 @@ const CasesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-medium text-[#ff8c00] tracking-widest uppercase">
-            Casos de Éxito
-          </span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]">
-            Resultados que hablan <span className="text-[#ebf2f7]/60">por sí solos</span>
-          </h2>
-        </motion.div>
+          <span className="text-sm font-medium text-[#ebf2f7] tracking-widest uppercase opacity-80"> Casos de Éxito </span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]">Resultados que hablan <span className="text-[#ff8c00]">por sí solos</span></h2>
+      </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-6">
           {cases.map((c, i) => (
