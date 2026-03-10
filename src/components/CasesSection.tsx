@@ -58,8 +58,8 @@ const CasesSection = () => (
           >
             {/* Result badge */}
             <div className="bg-[#ebf2f7]/10 px-6 py-4 border-b border-[#ebf2f7]/20">
-              <div className="text-2xl font-heading font-bold text-[#ebf2f7]">{c.result}</div>
-              <div className="text-xs text-muted-foreground mt-1">{c.resultSub}</div>
+             <div className="text-2xl font-bold text-[#ebf2f7] mb-1">{c.result}</div>
+             <div className="text-xs text-[#ebf2f7]/60 tracking-wide uppercase">{c.resultSub}</div>
             </div>
 
             <div className="p-6 flex flex-col flex-1">
