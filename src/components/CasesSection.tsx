@@ -54,7 +54,7 @@ const CasesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="glass-card overflow-hidden group hover:neon-border transition-all duration-500 flex flex-col"
+            className="bg-[#0a2b49] rounded-2xl overflow-hidden group hover:border-[#ebf2f7]/30 transition-all duration-500 flex flex-col border border-[#ebf2f7]/10 shadow-2xl"
           >
             {/* Result badge */}
             <div className="bg-[#ebf2f7]/10 px-6 py-4 border-b border-[#ebf2f7]/20">
