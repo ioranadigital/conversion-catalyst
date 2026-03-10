@@ -112,7 +112,7 @@ const ServicesSection = () => (
               <s.icon className="h-8 w-8 text-[#ebf2f7] group-hover:text-[#ebf2f7]" />
             </div>
 
-            <div className="text-[10px] font-bold text-[#ebf2f7]/60 uppercase tracking-widest mb-2 group-hover:text-[#0a2b49]/70">
+            <div className="text-[10px] font-bold text-[#ebf2f7]/60 uppercase tracking-widest mb-2 group-hover:text-[#ebf2f7]/70">
               {s.benefit}
             </div>
             
@@ -128,7 +128,7 @@ const ServicesSection = () => (
             <ul className="space-y-3 mt-auto">
               {s.features.map((f) => (
                 <li key={f} className="flex items-start gap-2 text-[13px] text-[#ebf2f7]/90 group-hover:text-[#ebf2f7] transition-colors">
-                  <CheckCircle2 className="h-4 w-4 text-[#ff8c00] mt-0.5 shrink-0 group-hover:text-[#0a2b49]" />
+                  <CheckCircle2 className="h-4 w-4 text-[#ff8c00] mt-0.5 shrink-0 group-hover:text-[#ff8c00]" />
                   {f}
                 </li>
               ))}
