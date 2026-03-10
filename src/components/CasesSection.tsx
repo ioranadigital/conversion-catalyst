@@ -32,7 +32,7 @@ const cases = [
 ];
 
 const CasesSection = () => (
-  <section id="casos" className="section-padding bg-[#24496b] relative overflow-hidden">
+  <section id="casos" className="section-padding bg-secondary/30">
     <div className="container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -41,34 +41,39 @@ const CasesSection = () => (
         className="text-center mb-16"
       >
         <span className="text-sm font-medium text-primary tracking-widest uppercase">Casos de Éxito</span>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]"> Resultados que hablan  <span className="gradient-text">por sí solos</span></h2>
+        <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3">
+          Resultados que hablan <span className="gradient-text">por sí solos</span>
+        </h2>
       </motion.div>
-<div className="grid lg:grid-cols-3 gap-6">
-  {cases.map((c, i) => (
-    <motion.div
-      key={c.company}
-   
-      className="flex flex-col rounded-3xl overflow-hidden border border-[#ebf2f7]/10 shadow-2xl group transition-all duration-500"
-    >
-    
-      <div className="bg-[#ebf2f7]/5 p-8 border-b border-[#ebf2f7]/10">
-        <div className="text-2xl font-bold text-[#ebf2f7] mb-1">{c.result}</div>
-        <div className="text-xs text-[#ebf2f7]/60 tracking-wide uppercase">{c.resultSub}</div>
-      </div>
 
+      <div className="grid lg:grid-cols-3 gap-6">
+        {cases.map((c, i) => (
+          <motion.div
+            key={c.company}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.15 }}
+            className="glass-card overflow-hidden group hover:neon-border transition-all duration-500 flex flex-col"
+          >
+            {/* Result badge */}
+            <div className="bg-primary/10 px-6 py-4 border-b border-border">
+              <div className="text-2xl font-heading font-bold neon-text">{c.result}</div>
+              <div className="text-xs text-muted-foreground mt-1">{c.resultSub}</div>
+            </div>
 
-      <div className="bg-[#0a2b49] p-8 flex-grow space-y-6">
+            <div className="p-6 flex flex-col flex-1">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-xs font-bold text-primary">{c.company[0]}</span>
+                </div>
+                <div>
+                  <div className="font-semibold text-sm">{c.company}</div>
+                  <div className="text-xs text-muted-foreground">{c.industry}</div>
+                </div>
+              </div>
 
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#ebf2f7]/10 flex items-center justify-center text-[#ebf2f7] font-bold border border-[#ebf2f7]/10">
-            {c.company[0]}
-          </div>
-          <div>
-            <div className="font-bold text-[#ebf2f7]">{c.company}</div>
-            <div className="text-[10px] text-[#ebf2f7]/50 uppercase tracking-widest">{c.industry}</div>
-          </div>
-        </div>
-          <div className="space-y-3 text-sm flex-1">
+              <div className="space-y-3 text-sm flex-1">
                 <div>
                   <span className="text-primary font-semibold text-xs uppercase tracking-wider">Contexto</span>
                   <p className="text-muted-foreground mt-1">{c.context}</p>
@@ -81,17 +86,11 @@ const CasesSection = () => (
                   <span className="text-primary font-semibold text-xs uppercase tracking-wider">Solución</span>
                   <p className="text-muted-foreground mt-1">{c.solution}</p>
                 </div>
-
-        <div className="space-y-4">
-          <div className="text-sm text-[#ebf2f7]/80 leading-relaxed italic">
-            "Implementamos una estrategia de topic clusters con +60 artículos optimizados para dominar el mercado de SaaS."
-          </div>
-        </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </motion.div>
-  ))}
-</div>
-   
     </div>
   </section>
 );
