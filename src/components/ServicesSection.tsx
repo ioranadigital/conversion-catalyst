@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { 
-  Search, 
-  MousePointerClick, 
-  PenTool, 
-  CheckCircle2, 
+  Search,           // Icono para SEO
+  MousePointerClick, // Icono para paid
+  PenTool,         // Icono para Contenidos
+  CheckCircle2, // Icono para Automatizaciones
   Repeat,      // Icono para Automatizaciones
   CodeXml,     // Icono para Desarrollo Web
   Layers3      // Icono para Jira Service Management
@@ -105,7 +105,7 @@ const ServicesSection = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
             /* Tarjeta estilizada con fondo marino y hover naranja */
-            className="bg-[#ebf2f7]/5 p-8 group transition-all duration-500 flex flex-col rounded-2xl border border-[#ebf2f7]/10 hover:bg-[#ff8c00] hover:border-[#ff8c00] hover:shadow-[0_0_30px_rgba(255,140,0,0.2)]"
+            className="bg-[#ebf2f7]/5 p-8 group transition-all duration-500 flex flex-col rounded-2xl border border-[#ebf2f7]/10 hover:bg-[#446d92] hover:border-[#ff8c00] hover:shadow-[0_0_30px_rgba(255,140,0,0.2)]"
           >
             {/* Contenedor del Icono (Sin borde como pediste anteriormente) */}
             <div className="w-12 h-12 flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110">
