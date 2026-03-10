@@ -117,7 +117,7 @@ const ServicesSection = () => (
             </div>
             
             {/* Título en Naranja que cambia a Marino en Hover */}
-            <h3 className="text-xl text-[#ff8c00] font-heading font-bold mb-3 group-hover:text-[#0a2b49] transition-colors">
+            <h3 className="text-xl text-[#ff8c00] font-heading font-bold mb-3 group-hover:text-[#ff8c00] transition-colors">
               {s.title}
             </h3>
             
