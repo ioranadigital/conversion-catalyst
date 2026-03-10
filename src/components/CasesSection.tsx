@@ -39,9 +39,7 @@ const CasesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
-        >
-          {/* Subtítulo en Naranja para resaltar */}
-          <span className="text-sm font-medium text-[#ff8c00] tracking-widest uppercase">
+        >          <span className="text-sm font-medium text-[#ff8c00] tracking-widest uppercase">
             Casos de Éxito
           </span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]">
@@ -57,7 +55,6 @@ const CasesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              {/* Tarjeta con borde sutil para que no se pierda en el fondo */}
               className="flex flex-col rounded-3xl overflow-hidden border border-[#ebf2f7]/10 bg-[#0a2b49] shadow-2xl group transition-all duration-500 hover:border-[#ebf2f7]/30"
             >
               {/* Encabezado de Métricas */}
@@ -68,8 +65,7 @@ const CasesSection = () => {
 
               {/* Cuerpo de la Tarjeta */}
               <div className="p-8 flex-grow space-y-6">
-                {/* Info Cliente */}
-                <div className="flex items-center gap-3">
+                       <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#ebf2f7]/10 flex items-center justify-center text-[#ebf2f7] font-bold border border-[#ebf2f7]/10">
                     {c.company[0]}
                   </div>
@@ -79,7 +75,6 @@ const CasesSection = () => {
                   </div>
                 </div>
 
-                {/* Detalles: Contexto, Desafío, Solución en BLANCO */}
                 <div className="space-y-4">
                   {['Contexto', 'Desafío', 'Solución'].map((label) => (
                     <div key={label}>
@@ -87,7 +82,6 @@ const CasesSection = () => {
                         {label}
                       </div>
                       <p className="text-sm text-[#ebf2f7]/70 leading-relaxed">
-                        {/* Aquí asumo que tus datos tienen c.contexto, c.desafio, etc. */}
                         {c[label.toLowerCase() as keyof typeof c]}
                       </p>
                     </div>
