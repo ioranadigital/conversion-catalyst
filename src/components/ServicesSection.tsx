@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
-import { Search, MousePointerClick, PenTool, CheckCircle2 } from "lucide-react";
+import { 
+  Search, 
+  MousePointerClick, 
+  PenTool, 
+  CheckCircle2, 
+  Repeat,      // Icono para Automatizaciones
+  CodeXml,     // Icono para Desarrollo Web
+  Layers3      // Icono para Jira Service Management
+} from "lucide-react";
 
 const services = [
   {
@@ -35,56 +43,57 @@ const services = [
       "Link building con outreach personalizado",
     ],
   },
-
- {
-    icon: Search,
-    title: "SEO Técnico & On-Page",
-    benefit: "Posiciona donde tu ICP busca soluciones",
-    desc: "Optimizamos cada rincón de tu sitio para que Google te encuentre primero y tus visitantes conviertan más.",
+  {
+    icon: Repeat,
+    title: "Automatizaciones",
+    benefit: "Eficiencia operativa sin fricciones",
+    desc: "Conectamos tus herramientas para eliminar tareas manuales y dejar que tu equipo se enfoque en lo que importa.",
     features: [
-      "Auditoría técnica completa y roadmap de mejoras",
-      "Keyword research con intent mapping para SaaS",
-      "Optimización de landing pages y arquitectura web",
+      "Workflows personalizados (Zapier, Make, n8n)",
+      "Sincronización de datos entre CRM y Marketing",
+      "Automatización de reporting y dashboards",
     ],
   },
   {
-    icon: MousePointerClick,
-    title: "PPC & Paid Search",
-    benefit: "Tráfico de alta intención desde el día 1",
-    desc: "Campañas en Google Ads diseñadas para captar leads cualificados mientras tu SEO crece orgánicamente.",
+    icon: CodeXml,
+    title: "Desarrollo Web",
+    benefit: "Tu mejor activo de ventas 24/7",
+    desc: "Diseñamos y desarrollamos sitios web de alto rendimiento enfocados en la experiencia de usuario y la conversión.",
     features: [
-      "Campañas de Search, Display y YouTube Ads",
-      "Optimización de CPA y ROAS en tiempo real",
-      "A/B testing de copies y landing pages",
+      "Desarrollo con Next.js y Tailwind CSS",
+      "Optimización extrema de Core Web Vitals",
+      "Diseño UI/UX orientado a producto SaaS",
     ],
   },
   {
-    icon: PenTool,
-    title: "Content Marketing",
-    benefit: "Contenido que educa, posiciona y vende",
-    desc: "Creamos contenido estratégico que atrae a tu buyer persona y lo guía a través de tu funnel de conversión.",
+    icon: Layers3,
+    title: "Jira Service Management",
+    benefit: "Escalabilidad en soporte y procesos",
+    desc: "Configuramos tu centro de servicios para gestionar solicitudes internas y externas con estándares profesionales.",
     features: [
-      "Estrategia de contenido basada en topic clusters",
-      "Artículos, guías y whitepapers optimizados",
-      "Link building con outreach personalizado",
+      "Configuración de portales de autoservicio",
+      "Gestión de colas, SLAs y automatizaciones",
+      "Integración con Confluence y Opsgenie",
     ],
   },
-
-  
 ];
 
 const ServicesSection = () => (
-  <section id="servicios" className="section-padding bg-[#24496b] relative overflow-hidden">
-     <div className="container">
+  /* Cambio a fondo marino profundo #0a2b49 */
+  <section id="servicios" className="section-padding bg-[#0a2b49] relative overflow-hidden">
+    <div className="container">
       <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="text-center mb-16"
-    >
-
-        <span className="text-sm font-medium text-primary tracking-widest uppercase">Servicios</span>
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]"> Todo lo que necesitas para<span className="gradient-text">dominar los rankings</span></h2>
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <span className="text-sm font-medium text-[#ebf2f7] tracking-widest uppercase opacity-80">
+          Servicios
+        </span>
+        <h2 className="text-3xl md:text-4xl font-heading font-bold mt-3 text-[#ebf2f7]">
+          Todo lo que necesitas para <span className="text-[#ff8c00]">dominar los rankings</span>
+        </h2>
       </motion.div>
 
       <div className="grid md:grid-cols-3 gap-6">
@@ -95,22 +104,31 @@ const ServicesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            // Fondo tarjetas y hover
-            className="bg-white/10 backdrop-blur-md p-8 group hover:bg-[#0a2b49] hover:border-white/40 hover:shadow-[0_0_30px_rgba(68,109,146,0.3)] transition-all duration-500 flex flex-col rounded-2xl border border-white/10"
+            /* Tarjeta estilizada con fondo marino y hover naranja */
+            className="bg-[#ebf2f7]/5 p-8 group transition-all duration-500 flex flex-col rounded-2xl border border-[#ebf2f7]/10 hover:bg-[#ff8c00] hover:border-[#ff8c00] hover:shadow-[0_0_30px_rgba(255,140,0,0.2)]"
           >
-            
-            {/* color Logo */}
-            <div className="w-12 h-12 rounded-lg bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(235,242,247,0.1)]">
-              <s.icon className="h-6 w-6 text-[#ebf2f7]" /> {/* Dcolor icocno */}
+            {/* Contenedor del Icono (Sin borde como pediste anteriormente) */}
+            <div className="w-12 h-12 flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110">
+              <s.icon className="h-8 w-8 text-[#ebf2f7] group-hover:text-[#0a2b49]" />
             </div>
-                      
-            <div className="text-xs font-semibold text-[#ebf2f7]/70 uppercase tracking-wider mb-2">{s.benefit}</div>
-            <h3 className="text-xl text-[#f97316] font-heading font-semibold mb-3">{s.title}</h3>
-            <p className="text-[#ebf2f7]/80 mb-6 leading-relaxed">{s.desc}</p>
+
+            <div className="text-[10px] font-bold text-[#ebf2f7]/60 uppercase tracking-widest mb-2 group-hover:text-[#0a2b49]/70">
+              {s.benefit}
+            </div>
+            
+            {/* Título en Naranja que cambia a Marino en Hover */}
+            <h3 className="text-xl text-[#ff8c00] font-heading font-bold mb-3 group-hover:text-[#0a2b49] transition-colors">
+              {s.title}
+            </h3>
+            
+            <p className="text-[#ebf2f7]/80 mb-6 leading-relaxed text-sm group-hover:text-[#0a2b49] transition-colors">
+              {s.desc}
+            </p>
+            
             <ul className="space-y-3 mt-auto">
               {s.features.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-sm text-[#ebf2f7]/90">
-                  <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <li key={f} className="flex items-start gap-2 text-[13px] text-[#ebf2f7]/90 group-hover:text-[#0a2b49] transition-colors">
+                  <CheckCircle2 className="h-4 w-4 text-[#ff8c00] mt-0.5 shrink-0 group-hover:text-[#0a2b49]" />
                   {f}
                 </li>
               ))}
