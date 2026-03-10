@@ -109,7 +109,7 @@ const ServicesSection = () => (
             >
             {/* Contenedor del Icono (Sin borde como pediste anteriormente) */}
             <div className="w-12 h-12 flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110">
-              <s.icon className="h-8 w-8 text-[#ebf2f7] group-hover:text-[#0a2b49]" />
+              <s.icon className="h-8 w-8 text-[#ebf2f7] group-hover:text-[#ebf2f7]" />
             </div>
 
             <div className="text-[10px] font-bold text-[#ebf2f7]/60 uppercase tracking-widest mb-2 group-hover:text-[#0a2b49]/70">
@@ -121,13 +121,13 @@ const ServicesSection = () => (
               {s.title}
             </h3>
             
-            <p className="text-[#ebf2f7]/80 mb-6 leading-relaxed text-sm group-hover:text-[#0a2b49] transition-colors">
+            <p className="text-[#ebf2f7]/80 mb-6 leading-relaxed text-sm group-hover:text-[#ebf2f7] transition-colors">
               {s.desc}
             </p>
             
             <ul className="space-y-3 mt-auto">
               {s.features.map((f) => (
-                <li key={f} className="flex items-start gap-2 text-[13px] text-[#ebf2f7]/90 group-hover:text-[#0a2b49] transition-colors">
+                <li key={f} className="flex items-start gap-2 text-[13px] text-[#ebf2f7]/90 group-hover:text-[#ebf2f7] transition-colors">
                   <CheckCircle2 className="h-4 w-4 text-[#ff8c00] mt-0.5 shrink-0 group-hover:text-[#0a2b49]" />
                   {f}
                 </li>
