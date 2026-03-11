@@ -74,7 +74,7 @@ const Navbar = () => {
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
             <button className="flex items-center gap-1 text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium">
-              Servicios
+              Soluciones de Marketing
               <ChevronDown className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
             {servicesOpen && (
