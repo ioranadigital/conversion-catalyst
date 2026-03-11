@@ -29,20 +29,24 @@ const HeroSection = () => {
           </div>
 
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-6 text-[#ebf2f7]">
-  Domina Google.{" "}
-  <span className="gradient-text">Escala tu Saas</span>{" "}
-  con tráfico orgánico que convierte.
-</h1>
+  Domina Google.{" "} <span className="gradient-text">Escala tu Saas</span>{" "} con tráfico orgánico que convierte. </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
             Ayudamos a las empresas a multiplicar su ventas con estrategias SEO basadas en datos, PPC de alto rendimiento y contenido que posiciona.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={scrollToContact} className="group text-base px-8">
-              Conoce Nuestros Servicios
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+  <Button 
+    size="lg" 
+    onClick={scrollToservicios} 
+    className="group text-base px-8 bg-white text-[#0a2b49] hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300"
+  >
+    Conoce nuestros servicios
+    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+  </Button>
+</div>
+
+            
         <Button
   size="lg"
   variant="outline"
