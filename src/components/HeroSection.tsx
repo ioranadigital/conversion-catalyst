@@ -39,10 +39,12 @@ const HeroSection = () => {
           </p>
 
      <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={scrollToContact} className="group text-base px-8">
-              Conoce Nuestros Servicios
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>            
+          <div className="flex flex-col sm:flex-row gap-4">
+  <a href="#servicios"  className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-medium text-[#0a2b49] transition-all hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"  >
+    Conoce Nuestros Servicios
+    <ArrowRight className="ml-2 h-4 w-4" />
+  </a>
+</div>         
            
         <Button
   size="lg"
