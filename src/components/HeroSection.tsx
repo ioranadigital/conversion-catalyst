@@ -38,7 +38,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
   <Button 
     size="lg" 
-    onClick={scrollToservicios} 
+      onClick={() => document.querySelector("#servicios")?.scrollIntoView({ behavior: "smooth" })}
     className="group text-base px-8 bg-white text-[#0a2b49] hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300"
   >
     Conoce nuestros servicios
