@@ -127,10 +127,9 @@ const ServicesSection = () => (
               {s.benefit}
             </div>
             
-            <h3 className="text-xl text-[#ebf2f7] font-heading font-bold mb-3 transition-colors">
-              {s.title}
-            </h3>
-            
+          <h3 className="text-xl text-[#ebf2f7] font-heading font-bold mb-3 transition-colors duration-300 group-hover:text-[#ff8c00]">
+            {s.title}
+         </h3>            
             <p className="text-[#ebf2f7]/80 mb-6 leading-relaxed text-sm group-hover:text-[#ebf2f7] transition-colors">
               {s.desc}
             </p>
