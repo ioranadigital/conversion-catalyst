@@ -3,13 +3,13 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-://const serviceLinks = [
+/*const serviceLinks = [
   { label: 'SEO Técnico & On-Page', href: '/servicios/seo-tecnico' },
   { label: 'PPC & Paid Search', href: '/servicios/ppc-paid-search' },
   { label: 'Content Marketing', href: '/servicios/content-marketing' },
   { label: 'Automatizaciones', href: '/servicios/automatizaciones' },
   { label: 'Desarrollo Web', href: '/servicios/desarrollo-web' },
-];://
+];*/
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
