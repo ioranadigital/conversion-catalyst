@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const navLinks = [
     { label: 'Inicio', href: '#hero' },
-    { label: 'Inicio', href: '#servicios' },
+    { label: 'Servicios', href: '#servicios' },
     { label: 'Nosotros', href: '#nosotros' },
     { label: 'Casos de Éxito', href: '#casos' },
     { label: 'FAQ', href: '#faq' },
