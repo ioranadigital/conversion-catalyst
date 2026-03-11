@@ -38,11 +38,12 @@ const HeroSection = () => {
             Ayudamos a las empresas a multiplicar su ventas con estrategias SEO basadas en datos, PPC de alto rendimiento y contenido que posiciona.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+     <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" onClick={scrollToContact} className="group text-base px-8">
               Conoce Nuestros Servicios
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            </Button>            
+           
         <Button
   size="lg"
   variant="outline"
