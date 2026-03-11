@@ -132,15 +132,7 @@ className="bg-[#ebf2f7]/5 p-8 group transition-all duration-500 flex flex-col ro
                 </li>
               ))}
             </ul>
-            /*<div className="mt-auto pt-4">
-      <a 
-        href={`/servicios/${s.title.toLowerCase().replace(/\s+/g, '-')}`}
-        className="inline-flex items-center text-[#ebf2f7] font-medium text-sm hover:text-[#ff8c00] transition-colors group/link"
-      >
-        Saber más sobre {s.title}
-        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
-      </a>
-    </div>*/
+
           </motion.div>
         ))}
       </div>
