@@ -1,65 +1,31 @@
-import React, { useState, useRef } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { Button } from './ui/button';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-
-const serviceLinks = [
-  { label: 'SEO Técnico & On-Page', href: '/servicios/seo-tecnico' },
-  { label: 'PPC & Paid Search', href: '/servicios/ppc-paid-search' },
-  { label: 'Content Marketing', href: '/servicios/content-marketing' },
-  { label: 'Automatizaciones', href: '/servicios/automatizaciones' },
-  { label: 'Desarrollo Web', href: '/servicios/desarrollo-web' },
-];
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Referencia para el temporizador
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   const location = useLocation();
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
 
-  // Funciones para manejar el hover con retraso de seguridad
-  const handleMouseEnter = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setServicesOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    // Damos 150ms de gracia antes de cerrar
-    timeoutRef.current = setTimeout(() => {
-      setServicesOpen(false);
-    }, 150);
-  };
-
+  // Definimos los links dinámicamente según la ubicación
   const navLinks = [
-    { label: 'Inicio', href: '#hero' },
-    { label: 'Servicios', href: '#servicios' },
-    { label: 'Nosotros', href: '#nosotros' },
-    { label: 'Casos de Éxito', href: '#casos' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Inicio', href: isHome ? '#hero' : '/' },
+    { label: 'Servicios', href: isHome ? '#servicios' : '/#servicios' },
+    { label: 'Nosotros', href: isHome ? '#nosotros' : '/#nosotros' },
+    { label: 'Casos de Éxito', href: isHome ? '#casos' : '/#casos' },
+    { label: 'Contacto', href: isHome ? '#contacto' : '/#contacto' },
   ];
 
-  const scrollTo = (id: string) => {
-    if (isHome) {
-      const element = document.querySelector(id);
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('#') && isHome) {
+      // Si estamos en el home y es un ancla, scroll suave
+      const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-        setOpen(false);
       }
     } else {
-      navigate('/' + id);
-      setOpen(false);
-    }
-  };
-
-  const handleCTA = () => {
-    if (isHome) {
-      document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/#contacto');
+      // Si no estamos en el home, navegamos a la ruta
+      navigate(href);
     }
     setOpen(false);
   };
@@ -67,40 +33,43 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a2b49]/80 backdrop-blur-xl border-b border-[#ebf2f7]/10">
       <div className="container flex items-center justify-between h-16">
+        {/* Logo - Siempre vuelve al Home */}
         <div className="flex items-center gap-3"> 
           <img src="/iorana-marketing-digital.png" alt="Logo" className="h-8 w-auto object-contain shrink-0" />
-          <Link to="/" className="font-heading text-xl font-bold tracking-tight">
-            <span className="text-[#ebf2f7]">IORANA</span>{" "}
-            <span className="text-[#ebf2f7]/80">Digital</span>
+          <Link to="/" className="font-heading text-xl font-bold tracking-tight text-[#ebf2f7]">
+            IORANA <span className="text-[#ebf2f7]/80">Digital</span>
           </Link>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          <button onClick={() => scrollTo('#hero')} className="text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium">
-            Inicio
+          {/* Link de Inicio */}
+          <button 
+            onClick={() => handleNavClick(navLinks[0].href)}
+            className="text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium"
+          >
+            {navLinks[0].label}
           </button>
 
-          {/* Services Dropdown con zona de seguridad */}
+          {/* Dropdown de Servicios (Se mantiene igual en ambos) */}
           <div 
-            className="relative h-16 flex items-center" // h-16 para que ocupe toda la altura del nav
-            onMouseEnter={handleMouseEnter} 
-            onMouseLeave={handleMouseLeave}
+            className="relative h-16 flex items-center"
+            onMouseEnter={() => { if(timeoutRef.current) clearTimeout(timeoutRef.current); setServicesOpen(true); }}
+            onMouseLeave={() => { timeoutRef.current = setTimeout(() => setServicesOpen(false), 150); }}
           >
-            <button className="flex items-center gap-1 text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium">
+            <button className="flex items-center gap-1 text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium">
               Soluciones de Marketing
               <ChevronDown className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {servicesOpen && (
-              /* pt-4 es el 'puente invisible' para que el ratón no salga del área */
               <div className="absolute top-full left-0 w-64 pt-2">
-                <div className="bg-[#0a2b49] border border-[#ebf2f7]/15 rounded-xl shadow-2xl p-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="bg-[#0a2b49] border border-[#ebf2f7]/15 rounded-xl shadow-2xl p-2">
                   {serviceLinks.map((s) => (
                     <Link
                       key={s.href}
                       to={s.href}
-                      className="block px-4 py-2.5 text-sm text-[#ebf2f7]/80 hover:text-[#ebf2f7] hover:bg-[#ebf2f7]/5 rounded-lg transition-colors"
+                      className="block px-4 py-2.5 text-sm text-[#ebf2f7]/80 hover:text-[#ff8c00] hover:bg-[#ebf2f7]/5 rounded-lg transition-colors"
                       onClick={() => setServicesOpen(false)}
                     >
                       {s.label}
@@ -111,11 +80,12 @@ const Navbar = () => {
             )}
           </div>
 
+          {/* Resto de links dinámicos */}
           {navLinks.slice(2).map((l) => (
             <button
-              key={l.href}
-              onClick={() => scrollTo(l.href)}
-              className="text-sm text-[#ebf2f7] hover:text-[#ebf2f7]/70 transition-colors font-medium"
+              key={l.label}
+              onClick={() => handleNavClick(l.href)}
+              className="text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium"
             >
               {l.label}
             </button>
@@ -123,27 +93,13 @@ const Navbar = () => {
           
           <Button
             size="sm"
-            onClick={handleCTA}
-            className="bg-[#ebf2f7] text-[#0a2b49] font-bold hover:bg-[#ebf2f7]/90 transition-all shadow-md"
+            onClick={() => handleNavClick(isHome ? '#contacto' : '/#contacto')}
+            className="bg-[#ebf2f7] text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all shadow-md"
           >
             Agendar Consultoría
           </Button>
         </div>
-
-        {/* Mobile toggle */}
-        <button className="md:hidden text-[#ebf2f7]" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
       </div>
-
-      {/* Mobile Menu (Lógica simplificada para móvil) */}
-      {open && (
-        <div className="md:hidden bg-[#0a2b49] border-b border-[#ebf2f7]/10 p-4 flex flex-col gap-2">
-          {/* ... resto del menú móvil ... */}
-        </div>
-      )}
     </nav>
   );
 };
-
-export default Navbar;
