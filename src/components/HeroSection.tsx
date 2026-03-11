@@ -39,14 +39,14 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={scrollToContact} className="group text-base px-8 bg-white text-[#0a2b49] hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300">
-              Escríbenos si te interesa 
+            <Button size="lg" onClick={scrollToServices} className="group text-base px-8 bg-white text-[#0a2b49] hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300">
+              Nuestros Servicios
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
         <Button
   size="lg"
   variant="outline"
-  onClick={() => document.querySelector("#cases")?.scrollIntoView({ behavior: "smooth" })}
+  onClick={() => document.querySelector("#casos")?.scrollIntoView({ behavior: "smooth" })}
   className="text-base px-8 border-[#ebf2f7]/30 text-[#ebf2f7] hover:bg-[#ff8c00] hover:text-[#0a2b49] hover:border-[#ff8c00] transition-all duration-300 shadow-lg"
 >
   Ver Casos de Éxito
