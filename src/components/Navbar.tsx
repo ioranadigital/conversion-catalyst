@@ -132,10 +132,10 @@ const Navbar = () => {
           
           <Button
             size="sm"
-            onClick={() => handleNavClick('#contacto')}
+            onClick={() => handleNavClick('#servicios')}
             className="bg-[#ebf2f7] text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all shadow-md"
           >
-            Pregúntanos 
+            Nuestros Servicios
           </Button>
         </div>
 
