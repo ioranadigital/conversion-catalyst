@@ -145,7 +145,7 @@ const ServicesSection = () => (
             </ul>
 
             {/* ENLACE CONFIGURABLE E INDEPENDIENTE POR TARJETA */}
-            <div className="mt-auto pt-4">
+            <div className="mt-auto pt-4 flex justify-end">
               <a 
                 href={s.href}
                 className="inline-flex items-center gap-2 text-sm font-bold text-[#ff8c00] hover:text-[#ebf2f7] transition-all duration-300 group/link"
