@@ -40,13 +40,13 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" onClick={scrollToContact} className="group text-base px-8">
-              Agendar Consultoría Gratuita
+              Nuestros Servicios
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
         <Button
   size="lg"
   variant="outline"
-  onClick={() => document.querySelector("#casos")?.scrollIntoView({ behavior: "smooth" })}
+  onClick={() => document.querySelector("#servicios")?.scrollIntoView({ behavior: "smooth" })}
   className="text-base px-8 border-[#ebf2f7]/30 text-[#ebf2f7] hover:bg-[#ff8c00] hover:text-[#0a2b49] hover:border-[#ff8c00] transition-all duration-300 shadow-lg"
 >
   Ver Casos de Éxito
