@@ -1,83 +1,118 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg"; // Asegúrate de que la ruta sea correcta
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximo Lanzamiento | IORANA Digital</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-const ComingSoon = () => {
-  return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a2b49]">
-      {/* Background image con el overlay del Hero */}
-      <div className="absolute inset-0">
-        <img 
-          src={heroBg} 
-          alt="IORANA Digital" 
-          className="w-full h-full object-cover opacity-30" 
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a2b49] via-[#0a2b49]/80 to-transparent" />
-      </div>
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ebf2f7; /* Tu azul claro corporativo */
+            overflow: hidden;
+        }
 
-      <div className="container relative z-10 pt-24 pb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl"
-        >
-          {/* Badge de Estado */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ff8c00]/30 bg-[#ff8c00]/5 mb-8">
-            <div className="w-2 h-2 rounded-full bg-[#ff8c00] animate-pulse" />
-            <span className="text-xs font-medium text-[#ebf2f7]">Próximo Lanzamiento 2026</span>
-          </div>
+        /* Contenedor del fondo */
+        .bg-image {
+            /* Sustituye esta URL por tu imagen de construcción */
+            background-image: linear-gradient(rgba(10, 43, 73, 0.7), rgba(10, 43, 73, 0.7)), 
+                              url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-6 text-[#ebf2f7]">
-            Estamos cocinando algo <br />
-            <span className="text-[#ff8c00]">estratégicamente grande.</span>
-          </h1>
+        /* Contenido central */
+        .content {
+            padding: 20px;
+            max-width: 700px;
+        }
 
-          <p className="text-lg md:text-xl text-[#ebf2f7]/70 max-w-2xl mb-10 leading-relaxed">
-            IORANA Digital está en fase de despliegue. Muy pronto ayudaremos a las empresas a multiplicar sus ventas con SEO de alto impacto y estrategias de crecimiento para SaaS.
-          </p>
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="mailto:hola@iorana.digital" 
-              className="inline-flex items-center justify-center rounded-md bg-[#ff8c00] px-8 py-3 text-base font-bold text-white transition-all hover:bg-[#ff8c00]/90 hover:shadow-[0_0_20px_rgba(255,140,0,0.4)]"
-            >
-              Contactar ahora
-              <Mail className="ml-2 h-4 w-4" />
-            </a>
+        .logo span {
+            color: #ff8c00; /* Tu naranja de acento */
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: rgba(235, 242, 247, 0.8);
+        }
+
+        /* Barra de progreso decorativa */
+        .progress-container {
+            width: 100%;
+            background-color: rgba(235, 242, 247, 0.1);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(235, 242, 247, 0.1);
+        }
+
+        .progress-bar {
+            width: 75%; /* Nivel de carga */
+            height: 10px;
+            background-color: #ff8c00;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ebf2f7;
+            color: #0a2b49;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff8c00;
+            color: white;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-image">
+        <div class="content">
+            <div class="logo">IORANA <span>Digital</span></div>
+            <h1>Estamos trabajando en algo grande</h1>
+            <p>Nuestra nueva plataforma está casi lista. Estamos afinando los últimos detalles para ofrecerte la mejor experiencia en marketing digital.</p>
             
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-base px-8 border-[#ebf2f7]/30 text-[#ebf2f7] hover:bg-[#ebf2f7] hover:text-[#0a2b49] transition-all duration-300 shadow-lg"
-            >
-              Saber más sobre nosotros
-            </Button>
-          </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
 
-          {/* Stats decorativos del Hero para dar autoridad */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="flex flex-wrap gap-8 mt-16 pt-8 border-t border-[#ebf2f7]/10"
-          >
-            {[
-              { value: "95%", label: "Preparados para el despegue" },
-              { value: "24/7", label: "Soporte activo" },
-              { value: "SEO", label: "Optimización en curso" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-2xl md:text-3xl font-heading font-bold text-[#ff8c00]">{stat.value}</div>
-                <div className="text-sm text-[#ebf2f7]/60 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
+            <a href="mailto:hola@iorana.digital" class="cta-button">Contactar ahora</a>
+        </div>
+    </div>
 
-export default ComingSoon;
+</body>
+</html>
