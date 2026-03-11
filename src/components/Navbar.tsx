@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from './ui/button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -20,7 +20,22 @@ const Navbar = () => {
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
 
-  // Enlaces con sus IDs correctos del Index
+  // --- SOLUCIÓN AL PROBLEMA DE SCROLL DESDE PÁGINAS EXTERNAS ---
+  useEffect(() => {
+    // Si entramos al Home y hay un hash en la URL (ej: #servicios)
+    if (isHome && location.hash) {
+      // Esperamos un momento mínimo a que el DOM esté listo
+      const timeout = setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); 
+      return () => clearTimeout(timeout);
+    }
+  }, [isHome, location.hash]);
+  // -----------------------------------------------------------
+
   const navLinks = [
     { label: 'Inicio', href: '#hero' },
     { label: 'Servicios', href: '#servicios' },
@@ -31,20 +46,18 @@ const Navbar = () => {
   ];
 
   const handleNavClick = (href: string) => {
-    // Si el enlace es un ancla (empieza con #)
     if (href.startsWith('#')) {
       if (isHome) {
-        // Si ya estamos en el Home, hacemos scroll suave
+        // Si ya estamos en el home, scroll inmediato
         const element = document.querySelector(href);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       } else {
-        // SI NO ESTAMOS EN EL HOME, forzamos ir a "/" + el ancla (ej: /#nosotros)
+        // Si venimos de fuera, navegamos a la raíz + el hash
         navigate('/' + href);
       }
     } else {
-      // Si es una ruta normal (como "/"), simplemente navegamos
       navigate(href);
     }
     setOpen(false);
@@ -64,7 +77,6 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a2b49]/80 backdrop-blur-xl border-b border-[#ebf2f7]/10">
       <div className="container flex items-center justify-between h-16">
-        {/* Logo */}
         <div className="flex items-center gap-3"> 
           <img src="/iorana-marketing-digital.png" alt="Logo" className="h-8 w-auto object-contain shrink-0" />
           <Link to="/" className="font-heading text-xl font-bold tracking-tight text-[#ebf2f7]">
@@ -72,9 +84,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          {/* Link Inicio */}
           <button 
             onClick={() => handleNavClick('#hero')} 
             className="text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium"
@@ -82,7 +92,6 @@ const Navbar = () => {
             Inicio
           </button>
 
-          {/* Submenú de Soluciones */}
           <div 
             className="relative h-16 flex items-center" 
             onMouseEnter={handleMouseEnter} 
@@ -111,7 +120,6 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Enlaces Restantes (Servicios, Nosotros, etc.) */}
           {navLinks.slice(1).map((l) => (
             <button 
               key={l.label} 
@@ -131,13 +139,11 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile toggle */}
         <button className="md:hidden text-[#ebf2f7]" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-[#0a2b49] border-b border-[#ebf2f7]/10 p-4 flex flex-col gap-2">
            {navLinks.map((l) => (
