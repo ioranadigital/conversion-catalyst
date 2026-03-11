@@ -127,7 +127,7 @@ const ServicesSection = () => (
               {s.benefit}
             </div>
             
-            <h3 className="text-xl text-[#ff8c00] font-heading font-bold mb-3 transition-colors">
+            <h3 className="text-xl text-[#ebf2f7] font-heading font-bold mb-3 transition-colors">
               {s.title}
             </h3>
             
