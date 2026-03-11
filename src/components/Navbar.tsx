@@ -42,7 +42,7 @@ const Navbar = () => {
     { label: 'Nosotros', href: '#nosotros' },
     { label: 'Casos de Éxito', href: '#casos' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Contacto', href: '#contacto' },
+    /*{ label: 'Contacto', href: '#contacto' },*/
   ];
 
   const handleNavClick = (href: string) => {
@@ -135,7 +135,7 @@ const Navbar = () => {
             onClick={() => handleNavClick('#contacto')}
             className="bg-[#ebf2f7] text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all shadow-md"
           >
-            Agendar Consultoría
+            Pregúntanos 
           </Button>
         </div>
 
