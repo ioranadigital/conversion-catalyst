@@ -20,7 +20,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
 
-  // Configuración de enlaces: Anclas en Index, Rutas completas en subpáginas
+  // Lógica de enlaces: Si no es Home, añade "/" antes del ancla
   const navLinks = [
     { label: 'Inicio', href: isHome ? '#hero' : '/' },
     { label: 'Servicios', href: isHome ? '#servicios' : '/#servicios' },
@@ -32,11 +32,13 @@ const Navbar = () => {
 
   const handleNavClick = (href: string) => {
     if (href.startsWith('#') && isHome) {
+      // Scroll suave si ya estamos en el index
       const element = document.querySelector(href);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
+      // Navegación normal si estamos en páginas interiores
       navigate(href);
     }
     setOpen(false);
@@ -50,12 +52,13 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setServicesOpen(false);
-    }, 150); // Retraso de seguridad para que el menú no desaparezca rápido
+    }, 150);
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a2b49]/80 backdrop-blur-xl border-b border-[#ebf2f7]/10">
       <div className="container flex items-center justify-between h-16">
+        {/* Logo */}
         <div className="flex items-center gap-3"> 
           <img src="/iorana-marketing-digital.png" alt="Logo" className="h-8 w-auto object-contain shrink-0" />
           <Link to="/" className="font-heading text-xl font-bold tracking-tight text-[#ebf2f7]">
@@ -65,13 +68,20 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          {/* Primer link (Inicio) */}
-          <button onClick={() => handleNavClick(navLinks[0].href)} className="text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium">
+          {/* Enlace Inicio */}
+          <button 
+            onClick={() => handleNavClick(navLinks[0].href)} 
+            className="text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium"
+          >
             {navLinks[0].label}
           </button>
 
           {/* Submenú de Soluciones */}
-          <div className="relative h-16 flex items-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <div 
+            className="relative h-16 flex items-center" 
+            onMouseEnter={handleMouseEnter} 
+            onMouseLeave={handleMouseLeave}
+          >
             <button className="flex items-center gap-1 text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium">
               Soluciones de Marketing
               <ChevronDown className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
@@ -97,7 +107,11 @@ const Navbar = () => {
 
           {/* Resto de links dinámicos */}
           {navLinks.slice(2).map((l) => (
-            <button key={l.label} onClick={() => handleNavClick(l.href)} className="text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium">
+            <button 
+              key={l.label} 
+              onClick={() => handleNavClick(l.href)} 
+              className="text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium"
+            >
               {l.label}
             </button>
           ))}
@@ -117,11 +131,15 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Menú Móvil */}
+      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-[#0a2b49] border-b border-[#ebf2f7]/10 p-4 flex flex-col gap-2">
            {navLinks.map((l) => (
-            <button key={l.label} onClick={() => handleNavClick(l.href)} className="text-left text-[#ebf2f7] py-2 text-lg">
+            <button 
+              key={l.label} 
+              onClick={() => handleNavClick(l.href)} 
+              className="text-left text-[#ebf2f7] py-2 text-lg hover:text-[#ff8c00] transition-colors"
+            >
               {l.label}
             </button>
           ))}
@@ -132,4 +150,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
