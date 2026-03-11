@@ -15,6 +15,8 @@ const services = [
     title: "SEO Técnico & On-Page",
     benefit: "Posiciona donde tu ICP busca soluciones",
     desc: "Optimizamos cada rincón de tu sitio para que Google te encuentre primero y tus visitantes conviertan más.",
+    href: "/servicios/ppc",
+    linkText: "Escalar mis campañas",
     features: [
       "Auditoría técnica completa y roadmap de mejoras",
       "Keyword research con intent mapping para SaaS",
@@ -26,6 +28,8 @@ const services = [
     title: "PPC & Paid Search",
     benefit: "Tráfico de alta intención desde el día 1",
     desc: "Campañas en Google Ads diseñadas para captar leads cualificados mientras tu SEO crece orgánicamente.",
+        href: "/servicios/ppc",
+    linkText: "Escalar mis campañas",
     features: [
       "Campañas de Search, Display y YouTube Ads",
       "Optimización de CPA y ROAS en tiempo real",
@@ -37,6 +41,8 @@ const services = [
     title: "Content Marketing",
     benefit: "Contenido que educa, posiciona y vende",
     desc: "Creamos contenido estratégico que atrae a tu buyer persona y lo guía a través de tu funnel de conversión.",
+        href: "/servicios/ppc",
+    linkText: "Escalar mis campañas",
     features: [
       "Estrategia de contenido basada en topic clusters",
       "Artículos, guías y whitepapers optimizados",
@@ -48,6 +54,8 @@ const services = [
     title: "Automatizaciones",
     benefit: "Eficiencia operativa sin fricciones",
     desc: "Conectamos tus herramientas para eliminar tareas manuales y dejar que tu equipo se enfoque en lo que importa.",
+        href: "/servicios/ppc",
+    linkText: "Escalar mis campañas",
     features: [
       "Workflows personalizados (Zapier, Make, n8n)",
       "Sincronización de datos entre CRM y Marketing",
@@ -59,6 +67,8 @@ const services = [
     title: "Desarrollo Web",
     benefit: "Tu mejor activo de ventas 24/7",
     desc: "Diseñamos y desarrollamos sitios web de alto rendimiento enfocados en la experiencia de usuario y la conversión.",
+        href: "/servicios/ppc",
+    linkText: "Escalar mis campañas",
     features: [
       "Desarrollo con Next.js y Tailwind CSS",
       "Optimización extrema de Core Web Vitals",
@@ -70,6 +80,8 @@ const services = [
     title: "Jira Service Management",
     benefit: "Escalabilidad en soporte y procesos",
     desc: "Configuramos tu centro de servicios para gestionar solicitudes internas y externas con estándares profesionales.",
+        href: "/servicios/ppc",
+    linkText: "Escalar mis campañas",
     features: [
       "Configuración de portales de autoservicio",
       "Gestión de colas, SLAs y automatizaciones",
@@ -132,7 +144,15 @@ className="bg-[#ebf2f7]/5 p-8 group transition-all duration-500 flex flex-col ro
                 </li>
               ))}
             </ul>
-
+    <div className="mt-auto pt-6">
+        <a 
+          href={s.href}
+          className="inline-flex items-center gap-2 text-sm font-bold text-[#ff8c00] hover:text-[#ebf2f7] transition-all duration-300 group/link"
+        >
+          {s.linkText}
+          <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+        </a>
+      </div>
           </motion.div>
         ))}
       </div>
