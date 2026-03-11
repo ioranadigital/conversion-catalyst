@@ -20,25 +20,31 @@ const Navbar = () => {
   const navigate = useNavigate();
   const isHome = location.pathname === '/';
 
-  // Lógica de enlaces: Si no es Home, añade "/" antes del ancla
+  // Enlaces con sus IDs correctos del Index
   const navLinks = [
-    { label: 'Inicio', href: isHome ? '#hero' : '/' },
-    { label: 'Servicios', href: isHome ? '#servicios' : '/#servicios' },
-    { label: 'Nosotros', href: isHome ? '#nosotros' : '/#nosotros' },
-    { label: 'Casos de Éxito', href: isHome ? '#casos' : '/#casos' },
-    { label: 'FAQ', href: isHome ? '#faq' : '/#faq' },
-    { label: 'Contacto', href: isHome ? '#contacto' : '/#contacto' },
+    { label: 'Inicio', href: '#hero' },
+    { label: 'Servicios', href: '#servicios' },
+    { label: 'Nosotros', href: '#nosotros' },
+    { label: 'Casos de Éxito', href: '#casos' },
+    { label: 'FAQ', href: '#faq' },
+    { label: 'Contacto', href: '#contacto' },
   ];
 
   const handleNavClick = (href: string) => {
-    if (href.startsWith('#') && isHome) {
-      // Scroll suave si ya estamos en el index
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+    // Si el enlace es un ancla (empieza con #)
+    if (href.startsWith('#')) {
+      if (isHome) {
+        // Si ya estamos en el Home, hacemos scroll suave
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // SI NO ESTAMOS EN EL HOME, forzamos ir a "/" + el ancla (ej: /#nosotros)
+        navigate('/' + href);
       }
     } else {
-      // Navegación normal si estamos en páginas interiores
+      // Si es una ruta normal (como "/"), simplemente navegamos
       navigate(href);
     }
     setOpen(false);
@@ -68,12 +74,12 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
-          {/* Enlace Inicio */}
+          {/* Link Inicio */}
           <button 
-            onClick={() => handleNavClick(navLinks[0].href)} 
+            onClick={() => handleNavClick('#hero')} 
             className="text-sm text-[#ebf2f7] hover:text-[#ff8c00] transition-colors font-medium"
           >
-            {navLinks[0].label}
+            Inicio
           </button>
 
           {/* Submenú de Soluciones */}
@@ -105,8 +111,8 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Resto de links dinámicos */}
-          {navLinks.slice(2).map((l) => (
+          {/* Enlaces Restantes (Servicios, Nosotros, etc.) */}
+          {navLinks.slice(1).map((l) => (
             <button 
               key={l.label} 
               onClick={() => handleNavClick(l.href)} 
@@ -118,7 +124,7 @@ const Navbar = () => {
           
           <Button
             size="sm"
-            onClick={() => handleNavClick(isHome ? '#contacto' : '/#contacto')}
+            onClick={() => handleNavClick('#contacto')}
             className="bg-[#ebf2f7] text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all shadow-md"
           >
             Agendar Consultoría
@@ -138,7 +144,7 @@ const Navbar = () => {
             <button 
               key={l.label} 
               onClick={() => handleNavClick(l.href)} 
-              className="text-left text-[#ebf2f7] py-2 text-lg hover:text-[#ff8c00] transition-colors"
+              className="text-left text-[#ebf2f7] py-2 text-lg hover:text-[#ff8c00]"
             >
               {l.label}
             </button>
