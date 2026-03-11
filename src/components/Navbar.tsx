@@ -51,6 +51,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a2b49]/80 backdrop-blur-xl border-b border-[#ebf2f7]/10">
       <div className="container flex items-center justify-between h-16">
+        <img src="/iorana-marketing-digital.png" alt="Logo IORANA Digital" className="h-8 w-auto object-contain" 
+  />
         <Link to="/" className="font-heading text-xl font-bold tracking-tight">
           <span className="text-[#ebf2f7]">IORANA</span>{" "}
           <span className="text-[#ebf2f7]/80">Digital</span>
