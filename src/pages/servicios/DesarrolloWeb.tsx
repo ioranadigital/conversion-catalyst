@@ -16,7 +16,12 @@ const data = {
   ],
   whyMatters: {
     title: "¿Por qué importa tu sitio web?",
-    desc: "Tu sitio web es tu mejor vendedor — trabaja 24/7 y es la primera impresión para el 75% de tus potenciales clientes. Un sitio lento pierde el 53% de visitantes mobile. Un diseño poco profesional destruye la confianza en 0.05 segundos. Invertir en un sitio web de alto rendimiento no es un gasto: es el activo más rentable de tu estrategia digital. Cada mejora en velocidad y usabilidad se traduce directamente en más conversiones.",
+    desc: "",
+    points: [
+      "Tu sitio web es tu mejor vendedor — trabaja 24/7 y es la primera impresión para el 75% de clientes",
+      "Un sitio lento pierde el 53% de visitantes mobile",
+      "Un diseño poco profesional destruye la confianza en 0.05 segundos",
+    ],
   },
   process: [
     { step: "1", title: "Discovery y Estrategia", desc: "Entendemos tus objetivos, buyer persona y customer journey para definir la arquitectura de información y wireframes." },

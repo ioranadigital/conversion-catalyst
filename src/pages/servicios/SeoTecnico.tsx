@@ -16,7 +16,12 @@ const data = {
   ],
   whyMatters: {
     title: "¿Por qué importa el SEO técnico?",
-    desc: "El 68% de las experiencias online comienzan con un motor de búsqueda. Si tu web no está técnicamente optimizada, Google simplemente no la mostrará a tus potenciales clientes. Un SEO técnico sólido es la base sobre la que se construye todo el crecimiento orgánico: sin él, el mejor contenido del mundo es invisible. Además, Core Web Vitals es ahora un factor de ranking directo — la velocidad y la experiencia de usuario ya no son opcionales.",
+    desc: "",
+    points: [
+      "El 68% de las experiencias online comienzan con un motor de búsqueda",
+      "Sin SEO técnico sólido, el mejor contenido del mundo es invisible para Google",
+      "Core Web Vitals es factor de ranking directo — la velocidad ya no es opcional",
+    ],
   },
   process: [
     { step: "1", title: "Auditoría Inicial", desc: "Análisis exhaustivo de tu sitio: rastreo, indexación, velocidad, mobile-first, errores técnicos y oportunidades quick-win." },

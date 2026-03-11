@@ -12,6 +12,10 @@ import PpcPaidSearch from "./pages/servicios/PpcPaidSearch";
 import ContentMarketing from "./pages/servicios/ContentMarketing";
 import Automatizaciones from "./pages/servicios/Automatizaciones";
 import DesarrolloWeb from "./pages/servicios/DesarrolloWeb";
+import ImagenDeMarca from "./pages/servicios/ImagenDeMarca";
+import KitDigital from "./pages/soluciones/KitDigital";
+import DisenoLandings from "./pages/soluciones/DisenoLandings";
+import TodoParaTuNegocio from "./pages/soluciones/TodoParaTuNegocio";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +34,10 @@ const App = () => (
           <Route path="/servicios/content-marketing" element={<ContentMarketing />} />
           <Route path="/servicios/automatizaciones" element={<Automatizaciones />} />
           <Route path="/servicios/desarrollo-web" element={<DesarrolloWeb />} />
+          <Route path="/servicios/imagen-de-marca" element={<ImagenDeMarca />} />
+          <Route path="/soluciones/kit-digital" element={<KitDigital />} />
+          <Route path="/soluciones/diseno-de-landings" element={<DisenoLandings />} />
+          <Route path="/soluciones/todo-para-tu-negocio" element={<TodoParaTuNegocio />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
