@@ -52,7 +52,7 @@ const CasesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="group flex flex-col p-8 rounded-2xl transition-all duration-500 border border-[#ebf2f7]/10 bg-[#1a3b59] hover:bg-[#0a2b49] hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]"
+              className="flex flex-col rounded-3xl overflow-hidden border border-[#ebf2f7]/10 bg-[#0a2b49] shadow-2xl group transition-all duration-500 hover:border-[#ebf2f7]/30"
             >
               {/* Encabezado de Resultados */}
               <div className="bg-[#ebf2f7]/5 p-8 border-b border-[#ebf2f7]/10">
