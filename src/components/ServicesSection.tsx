@@ -117,7 +117,7 @@ const ServicesSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15 }}
-            className="bg-[#ebf2f7]/5 p-8 group transition-all duration-500 flex flex-col rounded-2xl border border-[#ebf2f7]/10 hover:bg-[#0a2b49] hover:border-white/80 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+          className="group flex flex-col p-8 rounded-2xl transition-all duration-500 border border-[#ebf2f7]/10 bg-[#1a3b59] hover:bg-[#0a2b49] hover:border-white/20 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]"
           >
             <div className="w-12 h-12 flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110">
               <s.icon className="h-8 w-8 text-[#ebf2f7]" />
