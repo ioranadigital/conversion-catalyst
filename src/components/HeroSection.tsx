@@ -39,7 +39,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={scrollToservicios} className="group text-base px-8 bg-white text-[#0a2b49] hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300">
+            <Button size="lg" onClick={scrollToServcices} className="group text-base px-8 bg-white text-[#0a2b49] hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] transition-all duration-300">
               Nuestros Servicios
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
