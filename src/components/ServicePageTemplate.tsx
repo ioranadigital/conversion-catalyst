@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Send } from "lucide-react";
+import { ArrowRight, CheckCircle2, Send, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import {
   Accordion,
@@ -31,12 +31,12 @@ interface ServiceFAQ {
   a: string;
 }
 
-interface ServicePageData {
+export interface ServicePageData {
   icon: LucideIcon;
   title: string;
   subtitle: string;
   includes: string[];
-  whyMatters: { title: string; desc: string };
+  whyMatters: { title: string; desc: string; points?: string[] };
   process: ServiceStep[];
   metrics: ServiceMetric[];
   faqs: ServiceFAQ[];
@@ -70,7 +70,7 @@ const ServiceContactForm = () => {
   };
 
   return (
-    <section className="section-padding">
+    <section id="contacto" className="section-padding scroll-mt-20">
       <div className="container max-w-3xl">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7] mb-4">
@@ -142,76 +142,96 @@ const ServiceContactForm = () => {
   );
 };
 
+const scrollToContacto = () => {
+  document.querySelector("#contacto")?.scrollIntoView({ behavior: "smooth" });
+};
 
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
-  const navigate = useNavigate();
-
-  const goToContact = () => {
-    navigate("/#contacto");
-    setTimeout(() => {
-      document.querySelector("#contacto")?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-  };
-
   return (
     <>
-      {/* Hero */}
+      {/* Hero — 2 columnas */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a2b49] to-background opacity-50" />
-        <div className="container relative z-10 max-w-4xl text-center">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <div className="w-16 h-16 mx-auto rounded-2xl bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-8">
-              <data.icon className="h-8 w-8 text-[#ebf2f7]" />
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#ebf2f7] mb-6">
-              {data.title}
-            </h1>
-            <p className="text-lg md:text-xl text-[#ebf2f7]/70 max-w-2xl mx-auto mb-10">
-              {data.subtitle}
-            </p>
-            <Button size="lg" onClick={goToContact} className="group text-base px-8">
-              Solicitar Propuesta
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+        <div className="container relative z-10 max-w-6xl">
+          <div className="grid lg:grid-cols-5 gap-12 items-start">
+            {/* Columna izquierda 60% */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-span-3"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-6">
+                <data.icon className="h-7 w-7 text-[#ebf2f7]" />
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#ebf2f7] mb-4">
+                {data.title}
+              </h1>
+              <p className="text-lg md:text-xl text-[#ebf2f7]/70 mb-8 leading-relaxed">
+                {data.subtitle}
+              </p>
 
-      {/* ¿Qué incluye? */}
-      <section className="section-padding bg-[#24496b]">
-        <div className="container max-w-5xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7]">
-              ¿Qué <span className="text-[#ff8c00]">incluye</span>?
-            </h2>
-          </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {data.includes.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex items-start gap-3 p-6 rounded-2xl bg-[#0a2b49] border border-[#ebf2f7]/15"
+              {/* Includes */}
+              <div className="mb-8">
+                <h2 className="text-xl font-heading font-bold text-[#ebf2f7] mb-5">
+                  ¿Qué <span className="text-[#ff8c00]">incluye</span>?
+                </h2>
+                <div className="grid sm:grid-cols-2 gap-3">
+                  {data.includes.map((item, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 + i * 0.08 }}
+                      className="flex items-start gap-3 p-4 rounded-xl bg-[#0a2b49]/60 border border-[#ebf2f7]/10"
+                    >
+                      <CheckCircle2 className="h-5 w-5 text-[#ff8c00] mt-0.5 shrink-0" />
+                      <span className="text-[#ebf2f7]/90 text-sm leading-relaxed">{item}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              <Button
+                size="lg"
+                onClick={scrollToContacto}
+                className="group text-base px-8"
               >
-                <CheckCircle2 className="h-5 w-5 text-[#ff8c00] mt-0.5 shrink-0" />
-                <span className="text-[#ebf2f7]/90 text-sm leading-relaxed">{item}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                Solicitar Propuesta
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </motion.div>
 
-      {/* ¿Por qué importa? */}
-      <section className="section-padding">
-        <div className="container max-w-3xl text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7] mb-6">
-              ¿Por qué <span className="gradient-text">importa</span>?
-            </h2>
-            <p className="text-lg text-[#ebf2f7]/70 leading-relaxed">{data.whyMatters.desc}</p>
-          </motion.div>
+            {/* Columna derecha 40% — ¿Por qué importa? */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="lg:col-span-2"
+            >
+              <div className="p-8 rounded-2xl bg-[#24496b] border border-[#ebf2f7]/15 sticky top-24">
+                <div className="flex items-center gap-3 mb-5">
+                  <TrendingUp className="h-5 w-5 text-[#ff8c00]" />
+                  <h2 className="text-xl font-heading font-bold text-[#ebf2f7]">
+                    ¿Por qué <span className="gradient-text">importa</span>?
+                  </h2>
+                </div>
+
+                {data.whyMatters.points && data.whyMatters.points.length > 0 ? (
+                  <ul className="space-y-4">
+                    {data.whyMatters.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-[#ff8c00] mt-2 shrink-0" />
+                        <span className="text-[#ebf2f7]/80 text-sm leading-relaxed">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-[#ebf2f7]/70 text-sm leading-relaxed">{data.whyMatters.desc}</p>
+                )}
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -299,7 +319,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </div>
       </section>
 
-      {/* CTA Final con Formulario */}
+      {/* Formulario de Contacto */}
       <ServiceContactForm />
     </>
   );

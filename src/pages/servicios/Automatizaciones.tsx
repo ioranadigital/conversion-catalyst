@@ -16,7 +16,12 @@ const data = {
   ],
   whyMatters: {
     title: "¿Por qué automatizar?",
-    desc: "Las empresas que automatizan sus procesos de marketing experimentan un aumento del 451% en leads cualificados. La automatización no solo ahorra tiempo — transforma la forma en que tu equipo trabaja. Elimina errores humanos, garantiza seguimiento consistente de cada lead y libera horas valiosas para que tu equipo se enfoque en estrategia y creatividad. Un workflow bien diseñado trabaja 24/7, incluso cuando tu equipo descansa.",
+    desc: "",
+    points: [
+      "Las empresas que automatizan experimentan un aumento del 451% en leads cualificados",
+      "Elimina errores humanos y garantiza seguimiento consistente de cada lead",
+      "Un workflow bien diseñado trabaja 24/7, incluso cuando tu equipo descansa",
+    ],
   },
   process: [
     { step: "1", title: "Auditoría de Procesos", desc: "Mapeamos todos tus procesos actuales de marketing y ventas para identificar cuellos de botella y oportunidades de automatización." },

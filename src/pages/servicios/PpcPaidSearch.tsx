@@ -16,7 +16,12 @@ const data = {
   ],
   whyMatters: {
     title: "¿Por qué invertir en PPC?",
-    desc: "Mientras el SEO construye tráfico a largo plazo, el PPC te da resultados inmediatos. Una campaña bien optimizada puede generar leads cualificados desde el primer día con un coste de adquisición predecible. El PPC complementa perfectamente tu estrategia SEO: captas demanda mientras construyes autoridad orgánica. Además, la data de campañas paid es invaluable para informar tu estrategia de contenido y SEO.",
+    desc: "",
+    points: [
+      "El PPC te da resultados inmediatos con un coste de adquisición predecible",
+      "Complementa tu estrategia SEO: captas demanda mientras construyes autoridad orgánica",
+      "La data de campañas paid es invaluable para informar tu estrategia de contenido",
+    ],
   },
   process: [
     { step: "1", title: "Análisis y Estrategia", desc: "Estudiamos tu mercado, competidores y buyer persona para diseñar una estructura de campañas que maximice el ROI." },

@@ -16,7 +16,12 @@ const data = {
   ],
   whyMatters: {
     title: "¿Por qué importa el content marketing?",
-    desc: "El content marketing genera 3x más leads que el marketing tradicional con un coste 62% menor. Además, construye autoridad de marca, mejora tu posicionamiento SEO y crea un activo que sigue generando tráfico y leads meses después de publicarse. Las empresas con blog generan un 67% más de leads mensuales. El contenido de calidad no es un gasto — es una inversión que se compone con el tiempo.",
+    desc: "",
+    points: [
+      "El content marketing genera 3x más leads que el marketing tradicional con un coste 62% menor",
+      "Las empresas con blog generan un 67% más de leads mensuales",
+      "El contenido de calidad es una inversión que se compone con el tiempo",
+    ],
   },
   process: [
     { step: "1", title: "Investigación y Estrategia", desc: "Analizamos tu ICP, competidores y keywords para definir pilares de contenido y topic clusters alineados con tus objetivos de negocio." },
