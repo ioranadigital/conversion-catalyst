@@ -116,12 +116,10 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               transition={{ duration: 0.7 }}
               className="lg:col-span-3 pt-4"
             >
-              {/* Recuperamos el Icono/Logo */}
               <div className="w-14 h-14 rounded-2xl bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-8">
                 <data.icon className="h-7 w-7 text-[#ebf2f7]" />
               </div>
               
-              {/* Título y párrafo en su posición original más abajo */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-[#ebf2f7] mb-6">
                 {data.title}
               </h1>
@@ -136,44 +134,30 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="lg:col-span-2 flex flex-col gap-6"
             >
-              {/* Tarjeta Informativa "¿Por qué importa?" */}
               <div className="p-8 rounded-2xl bg-[#24496b] border border-[#ebf2f7]/15 shadow-xl">
-    <div className="flex items-center gap-3 mb-5">
-      <TrendingUp className="h-5 w-5 text-[#ff8c00]" />
-      <h2 className="text-xl font-heading font-bold text-[#ebf2f7]">
-        ¿Por qué <span className="gradient-text">importa</span>?
-      </h2>
-    </div>
-    {data.whyMatters.points && (
-      <ul className="space-y-4">
-        {data.whyMatters.points.map((point, i) => (
-          <li key={i} className="flex items-start gap-3 text-sm text-[#ebf2f7]/80 leading-relaxed">
-            <div className="w-2 h-2 rounded-full bg-[#ff8c00] mt-2 shrink-0" />
-            {point}
-          </li>
-        ))}
-      </ul>
-    )}
-  </div>
+                <div className="flex items-center gap-3 mb-5">
+                  <TrendingUp className="h-5 w-5 text-[#ff8c00]" />
+                  <h2 className="text-xl font-heading font-bold text-[#ebf2f7]">
+                    ¿Por qué <span className="gradient-text">importa</span>?
+                  </h2>
+                </div>
+                {data.whyMatters.points && (
+                  <ul className="space-y-4">
+                    {data.whyMatters.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm text-[#ebf2f7]/80 leading-relaxed">
+                        <div className="w-2 h-2 rounded-full bg-[#ff8c00] mt-2 shrink-0" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
 
-  {/* Botón ocupando todo el ancho del bloque */}
-  <div className="w-full">
-    <Button 
-      size="lg" 
-      onClick={scrollToContacto} 
-      className="group w-full text-base px-10 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all duration-300 shadow-2xl border-none"
-    >
-      Solicítanos Más Información
-      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-    </Button>
-  </div>
-</motion.div>
-              {/* Botón Solicitar Propuesta debajo de la tarjeta informativa */}
-              <div className="flex w-full">
+              <div className="w-full">
                 <Button 
                   size="lg" 
                   onClick={scrollToContacto} 
-                  className="group text-base px-10 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all duration-300 shadow-2xl border-none"
+                  className="group w-full text-base px-10 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all duration-300 shadow-2xl border-none"
                 >
                   Solicítanos Más Información
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -207,8 +191,82 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </div>
       </section>
 
-      {/* Resto de secciones (Proceso, Resultados, FAQ) se mantienen... */}
-      {/* ... */}
+      <section className="py-24 bg-[#24496b]">
+        <div className="container max-w-4xl">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7]">
+              Nuestro <span className="text-[#ff8c00]">proceso</span>
+            </h2>
+          </motion.div>
+          <div className="space-y-6">
+            {data.process.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex gap-6 items-start p-6 rounded-2xl bg-[#0a2b49] border border-[#ebf2f7]/15"
+              >
+                <div className="w-12 h-12 shrink-0 rounded-full bg-[#ff8c00] flex items-center justify-center text-[#0a2b49] font-heading font-bold text-lg">
+                  {step.step}
+                </div>
+                <div>
+                  <h3 className="font-heading font-bold text-[#ebf2f7] text-lg mb-2">{step.title}</h3>
+                  <p className="text-[#ebf2f7]/70 text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7] mb-16">
+            Resultados <span className="gradient-text">reales</span>
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {data.metrics.map((m, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="text-center p-6 rounded-2xl bg-[#0a2b49] border border-[#ebf2f7]/15"
+              >
+                <div className="text-3xl font-heading font-bold neon-text mb-2">{m.value}</div>
+                <div className="text-xs text-[#ebf2f7]/60 uppercase tracking-wider">{m.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#24496b]">
+        <div className="container max-w-3xl">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7]">
+              Preguntas <span className="text-[#ff8c00]">frecuentes</span>
+            </h2>
+          </motion.div>
+          <Accordion type="single" collapsible className="space-y-3">
+            {data.faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`} className="bg-[#0a2b49] px-6 border border-[#ebf2f7]/15 rounded-xl">
+                <AccordionTrigger className="text-left font-heading font-semibold text-[#ebf2f7] py-5">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-[#ebf2f7]/70 leading-relaxed pb-5">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
+      <ServiceContactForm />
     </>
   );
 };
