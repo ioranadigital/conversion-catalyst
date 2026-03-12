@@ -105,28 +105,38 @@ const scrollToContacto = () => {
 const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
   return (
     <>
-      {/* SECCIÓN PRINCIPAL: Fondo azul oscuro continuo */}
-      <section className="pt-20 pb-28 relative overflow-hidden bg-[#0a2b49]">
+      <section className="pt-12 pb-24 relative overflow-hidden bg-[#0a2b49]">
         <div className="absolute inset-0 bg-[#0a2b49]" />
         <div className="container relative z-10 max-w-6xl">
           
-          {/* Hero Grid: Título y "Por qué importa" */}
-          <div className="grid lg:grid-cols-5 gap-12 items-start mb-20">
+          <div className="grid lg:grid-cols-5 gap-12 items-start mb-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
               className="lg:col-span-3"
             >
-              <div className="w-14 h-14 rounded-2xl bg-[#ebf2f7]/10 border border-[#ebf2f7]/20 flex items-center justify-center mb-6">
-                <data.icon className="h-7 w-7 text-[#ebf2f7]" />
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-[#ebf2f7] mb-4">
+              {/* 1) Logo eliminado */}
+              
+              {/* 2) Título y párrafo subidos */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-[#ebf2f7] mb-6">
                 {data.title}
               </h1>
-              <p className="text-lg md:text-xl text-[#ebf2f7]/70 leading-relaxed">
+              <p className="text-lg md:text-xl text-[#ebf2f7]/70 leading-relaxed mb-10 max-w-xl">
                 {data.subtitle}
               </p>
+
+              {/* 3) Botón Solicitar Propuesta incluido aquí */}
+              <div className="flex justify-start lg:justify-end lg:mr-20">
+                <Button 
+                  size="lg" 
+                  onClick={scrollToContacto} 
+                  className="group text-base px-10 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all duration-300 shadow-2xl border-none"
+                >
+                  Solicitar Propuesta
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </div>
             </motion.div>
 
             <motion.div
@@ -156,8 +166,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             </motion.div>
           </div>
 
-          {/* Sección ¿Qué incluye?: 3 columnas */}
-          <div className="mt-16">
+          <div className="mt-8">
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-[#ebf2f7] mb-8">
               ¿Qué <span className="text-[#ff8c00]">incluye</span>?
             </h2>
@@ -178,23 +187,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 </motion.div>
               ))}
             </div>
-
-            {/* BOTÓN: Blanco, Hover Naranja, Alineado a la Derecha */}
-            <div className="mt-14 flex justify-end">
-              <Button 
-                size="lg" 
-                onClick={scrollToContacto} 
-                className="group text-base px-10 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all duration-300 shadow-2xl border-none"
-              >
-                Solicitar Propuesta
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* PROCESO: Siguiente bloque con color diferente */}
+      {/* Secciones de Proceso, Resultados y FAQ se mantienen igual para la estructura completa */}
       <section className="py-24 bg-[#24496b]">
         <div className="container max-w-4xl">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
@@ -225,14 +222,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </div>
       </section>
 
-      {/* RESULTADOS */}
       <section className="py-24">
-        <div className="container max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7]">
-              Resultados <span className="gradient-text">reales</span>
-            </h2>
-          </motion.div>
+        <div className="container max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#ebf2f7] mb-16">
+            Resultados <span className="gradient-text">reales</span>
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {data.metrics.map((m, i) => (
               <motion.div
@@ -251,7 +245,6 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-24 bg-[#24496b]">
         <div className="container max-w-3xl">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
