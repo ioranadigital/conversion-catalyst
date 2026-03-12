@@ -183,7 +183,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 onClick={scrollToContacto} 
                 className="group text-sm md:text-base px-8 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all shadow-xl border-none"
               >
-                Solicitar Propuesta
+                Pregúntanos por este Servicio
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
