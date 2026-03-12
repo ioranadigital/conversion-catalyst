@@ -138,24 +138,36 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
             >
               {/* Tarjeta Informativa "¿Por qué importa?" */}
               <div className="p-8 rounded-2xl bg-[#24496b] border border-[#ebf2f7]/15 shadow-xl">
-                <div className="flex items-center gap-3 mb-5">
-                  <TrendingUp className="h-5 w-5 text-[#ff8c00]" />
-                  <h2 className="text-xl font-heading font-bold text-[#ebf2f7]">
-                    ¿Por qué <span className="gradient-text">importa</span>?
-                  </h2>
-                </div>
-                {data.whyMatters.points && (
-                  <ul className="space-y-4">
-                    {data.whyMatters.points.map((point, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-[#ebf2f7]/80 leading-relaxed">
-                        <div className="w-2 h-2 rounded-full bg-[#ff8c00] mt-2 shrink-0" />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+    <div className="flex items-center gap-3 mb-5">
+      <TrendingUp className="h-5 w-5 text-[#ff8c00]" />
+      <h2 className="text-xl font-heading font-bold text-[#ebf2f7]">
+        ¿Por qué <span className="gradient-text">importa</span>?
+      </h2>
+    </div>
+    {data.whyMatters.points && (
+      <ul className="space-y-4">
+        {data.whyMatters.points.map((point, i) => (
+          <li key={i} className="flex items-start gap-3 text-sm text-[#ebf2f7]/80 leading-relaxed">
+            <div className="w-2 h-2 rounded-full bg-[#ff8c00] mt-2 shrink-0" />
+            {point}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
 
+  {/* Botón ocupando todo el ancho del bloque */}
+  <div className="w-full">
+    <Button 
+      size="lg" 
+      onClick={scrollToContacto} 
+      className="group w-full text-base px-10 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all duration-300 shadow-2xl border-none"
+    >
+      Solicítanos Más Información
+      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+    </Button>
+  </div>
+</motion.div>
               {/* Botón Solicitar Propuesta debajo de la tarjeta informativa */}
               <div className="flex w-full">
                 <Button 
