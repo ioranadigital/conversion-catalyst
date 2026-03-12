@@ -29,9 +29,9 @@ const HeroSection = () => {
           </div>
 
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-6 text-[#ebf2f7]">
-  Posiciona tu negocio{" "}
-  <span className="gradient-text">Controla tu Visbilidad Online</span>{" "}
-  y posiciona tu negocio donde tus clientes te están buscando...
+  Controla tu Visbilidad Online.{" "}
+  <span className="gradient-text">Posiciona tu negocio</span>{" "}
+  donde tus clientes te están buscando...
 </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
