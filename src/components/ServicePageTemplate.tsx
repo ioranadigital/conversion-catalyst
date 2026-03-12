@@ -157,7 +157,7 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               </div>
 
               {/* Botón Solicitar Propuesta debajo de la tarjeta informativa */}
-              <div className="flex justify-start">
+              <div className="flex justify-end">
                 <Button 
                   size="lg" 
                   onClick={scrollToContacto} 
