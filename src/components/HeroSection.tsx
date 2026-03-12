@@ -29,7 +29,7 @@ const HeroSection = () => {
           </div>
 
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] mb-6 text-[#ebf2f7]">
-  Controla tu Visbilidad Online.{" "}
+  {" "}
   <span className="gradient-text">Posiciona tu negocio</span>{" "}
   donde tus clientes te están buscando...
 </h1>
