@@ -159,9 +159,8 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a2b49] to-background opacity-50" />
         <div className="container relative z-10 max-w-6xl">
           
-          {/* Hero Layout: 2 Columnas principales */}
+          {/* Hero Layout: Cabecera y "Por qué importa" */}
           <div className="grid lg:grid-cols-5 gap-12 items-start mb-20">
-            {/* Izquierda: Titular y Subtítulo */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -179,12 +178,11 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
               </p>
             </motion.div>
 
-            {/* Derecha: ¿Por qué importa? y Botón de acción */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="lg:col-span-2 flex flex-col gap-6"
+              className="lg:col-span-2"
             >
               <div className="p-8 rounded-2xl bg-[#24496b] border border-[#ebf2f7]/15">
                 <div className="flex items-center gap-3 mb-5">
@@ -205,18 +203,6 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                 ) : (
                   <p className="text-[#ebf2f7]/70 text-sm leading-relaxed">{data.whyMatters.desc}</p>
                 )}
-              </div>
-
-              {/* Botón Solicitar Propuesta: Blanco con Hover Naranja */}
-              <div className="flex justify-start">
-                <Button 
-                  size="lg" 
-                  onClick={scrollToContacto} 
-                  className="group text-base px-10 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all duration-300 shadow-xl"
-                >
-                  Solicitar Propuesta
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
               </div>
             </motion.div>
           </div>
@@ -246,6 +232,18 @@ const ServicePageTemplate = ({ data }: { data: ServicePageData }) => {
                   ))}
                 </div>
               ))}
+            </div>
+
+            {/* BOTÓN AL FINAL DE LA SECCIÓN Y A LA DERECHA */}
+            <div className="mt-12 flex justify-end">
+              <Button 
+                size="lg" 
+                onClick={scrollToContacto} 
+                className="group text-base px-10 bg-white text-[#0a2b49] font-bold hover:bg-[#ff8c00] hover:text-white transition-all duration-300 shadow-xl"
+              >
+                Solicitar Propuesta
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
             </div>
           </div>
         </div>
