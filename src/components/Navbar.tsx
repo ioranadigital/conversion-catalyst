@@ -16,6 +16,8 @@ const solutionLinks = [
   { label: 'Kit Digital', href: '/soluciones/kit-digital' },
   { label: 'Diseño de Landings', href: '/soluciones/diseno-de-landings' },
   { label: 'Todo para Tu Negocio', href: '/soluciones/todo-para-tu-negocio' },
+  { label: 'Informe Gratuito', href: '/como-esta-optimizado-mi-web' },
+];
 ];
 
 const Navbar = () => {
