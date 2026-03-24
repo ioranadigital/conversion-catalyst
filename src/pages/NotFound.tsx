@@ -11,7 +11,19 @@ const NotFound = () => {
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-    document.title = "Página no encontrada | IORANA Digital";
+    document.title = "Página no encontrada | Iorana Digital";
+    
+    const setMeta = (attr: string, key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+    setMeta("name", "robots", "noindex, nofollow");
+    setMeta("name", "description", "La página que buscas no existe. Vuelve al inicio o explora nuestros servicios de marketing digital.");
   }, [location.pathname]);
 
   return (

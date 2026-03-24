@@ -81,8 +81,9 @@ Dirección: Asturias, España
 
 const Privacidad = () => (
   <PageLayout
-    title="Política de Privacidad | IORANA Digital"
-    description="Política de privacidad de IORANA Digital. Conoce cómo tratamos tus datos personales conforme al RGPD y la LOPDGDD."
+    title="Política de Privacidad | Iorana Digital"
+    description="Política de privacidad de Iorana Digital. Conoce cómo tratamos tus datos personales conforme al RGPD y la LOPDGDD."
+    canonical="https://iorana.digital/privacidad"
   >
     <section className="section-padding">
       <div className="container max-w-3xl">
