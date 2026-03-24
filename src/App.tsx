@@ -16,6 +16,7 @@ import ImagenDeMarca from "./pages/servicios/ImagenDeMarca";
 import KitDigital from "./pages/soluciones/KitDigital";
 import DisenoLandings from "./pages/soluciones/DisenoLandings";
 import TodoParaTuNegocio from "./pages/soluciones/TodoParaTuNegocio";
+import ComoEstaOptimizadoMiWeb from "./pages/ComoEstaOptimizadoMiWeb";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/como-esta-optimizado-mi-web" element={<ComoEstaOptimizadoMiWeb />} />
           <Route path="/privacidad" element={<Privacidad />} />
           <Route path="/terminos" element={<Terminos />} />
           <Route path="/servicios/seo-tecnico" element={<SeoTecnico />} />
