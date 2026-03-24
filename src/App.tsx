@@ -16,7 +16,7 @@ import ImagenDeMarca from "./pages/servicios/ImagenDeMarca";
 import KitDigital from "./pages/soluciones/KitDigital";
 import DisenoLandings from "./pages/soluciones/DisenoLandings";
 import TodoParaTuNegocio from "./pages/soluciones/TodoParaTuNegocio";
-import ComoEstaOptimizadoMiWeb from "./pages/ComoEstaOptimizadoMiWeb";
+import ComoEstaOptimizadoMiWeb from "./pages/servicios/ComoEstaOptimizadoMiWeb";
 
 const queryClient = new QueryClient();
 
