@@ -18,7 +18,6 @@ const solutionLinks = [
   { label: 'Todo para Tu Negocio', href: '/soluciones/todo-para-tu-negocio' },
   { label: 'Informe Gratuito', href: '/como-esta-optimizado-mi-web' },
 ];
-];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
