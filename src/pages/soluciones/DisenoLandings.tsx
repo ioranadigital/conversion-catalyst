@@ -46,7 +46,11 @@ const data = {
 };
 
 const DisenoLandings = () => (
-  <PageLayout title="Diseño de Landings | IORANA Digital" description="Diseño y desarrollo de landing pages de alta conversión. UX/UI, copywriting persuasivo, A/B testing y optimización de velocidad.">
+  <PageLayout
+    title="Diseño de Landing Pages | Iorana Digital"
+    description="Diseño y desarrollo de landing pages de alta conversión en Asturias. UX/UI, copywriting persuasivo, A/B testing y optimización de velocidad."
+    canonical="https://iorana.digital/soluciones/diseno-de-landings"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );

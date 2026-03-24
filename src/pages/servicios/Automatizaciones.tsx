@@ -45,7 +45,11 @@ const data = {
 };
 
 const Automatizaciones = () => (
-  <PageLayout title="Automatizaciones de Marketing | IORANA Digital" description="Automatización de marketing y ventas. Workflows con Make, Zapier, integración CRM y email flows para escalar tu negocio.">
+  <PageLayout
+    title="Automatizaciones de Marketing | Iorana Digital"
+    description="Automatización de marketing y ventas en Asturias. Workflows con Make, Zapier, integración CRM y email flows para escalar tu negocio."
+    canonical="https://iorana.digital/servicios/automatizaciones"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );

@@ -45,7 +45,11 @@ const data = {
 };
 
 const ContentMarketing = () => (
-  <PageLayout title="Content Marketing | IORANA Digital" description="Servicios de content marketing estratégico. Blog, copywriting SEO, lead magnets y estrategia de contenidos para empresas.">
+  <PageLayout
+    title="Content Marketing | Iorana Digital"
+    description="Servicios de content marketing estratégico en Asturias. Blog, copywriting SEO, lead magnets y estrategia de contenidos para tu empresa."
+    canonical="https://iorana.digital/servicios/content-marketing"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );

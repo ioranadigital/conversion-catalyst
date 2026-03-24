@@ -63,8 +63,9 @@ Para clientes con servicios contratados, cualquier modificación sustancial ser�
 
 const Terminos = () => (
   <PageLayout
-    title="Términos y Condiciones | IORANA Digital"
-    description="Términos y condiciones de uso de los servicios de IORANA Digital. Conoce las condiciones de contratación, propiedad intelectual y jurisdicción."
+    title="Términos y Condiciones | Iorana Digital"
+    description="Términos y condiciones de uso de los servicios de Iorana Digital. Condiciones de contratación, propiedad intelectual y jurisdicción."
+    canonical="https://iorana.digital/terminos"
   >
     <section className="section-padding">
       <div className="container max-w-3xl">

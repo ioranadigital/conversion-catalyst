@@ -45,7 +45,11 @@ const data = {
 };
 
 const PpcPaidSearch = () => (
-  <PageLayout title="PPC & Paid Search | IORANA Digital" description="Gestión profesional de Google Ads y Meta Ads. Campañas de PPC orientadas a maximizar tu ROAS y generar leads cualificados.">
+  <PageLayout
+    title="PPC & Paid Search | Iorana Digital"
+    description="Gestión profesional de Google Ads y Meta Ads en Asturias. Campañas PPC orientadas a maximizar tu ROAS y generar leads cualificados."
+    canonical="https://iorana.digital/servicios/ppc-paid-search"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );
