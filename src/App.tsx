@@ -28,7 +28,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/como-esta-optimizado-mi-web" element={<ComoEstaOptimizadoMiWeb />} />
+          <Route path="/soluciones/como-esta-optimizado-mi-web" element={<ComoEstaOptimizadoMiWeb />} />
           <Route path="/privacidad" element={<Privacidad />} />
           <Route path="/terminos" element={<Terminos />} />
           <Route path="/servicios/seo-tecnico" element={<SeoTecnico />} />
