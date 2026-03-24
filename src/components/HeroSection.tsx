@@ -40,7 +40,7 @@ const HeroSection = () => {
 
      <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex flex-col sm:flex-row gap-4">
-  <a href="/como-esta-optimizado-mi-web"  className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-medium text-[#0a2b49] transition-all hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"  >
+  <a href="http://iorana.digital/soluciones/como-esta-optimizado-mi-web"  className="inline-flex items-center justify-center rounded-md bg-white px-8 py-3 text-base font-medium text-[#0a2b49] transition-all hover:bg-[#ebf2f7] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"  >
     ¿Como está mi sitio web?
     <ArrowRight className="ml-2 h-4 w-4" />
   </a>
