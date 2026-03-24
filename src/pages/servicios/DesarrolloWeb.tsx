@@ -45,7 +45,11 @@ const data = {
 };
 
 const DesarrolloWeb = () => (
-  <PageLayout title="Desarrollo Web | IORANA Digital" description="Diseño y desarrollo web profesional. Landing pages, webs corporativas, CRO y optimización de velocidad para empresas.">
+  <PageLayout
+    title="Desarrollo Web | Iorana Digital"
+    description="Diseño y desarrollo web profesional en Asturias. Landing pages, webs corporativas, CRO y optimización de velocidad para empresas."
+    canonical="https://iorana.digital/servicios/desarrollo-web"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );

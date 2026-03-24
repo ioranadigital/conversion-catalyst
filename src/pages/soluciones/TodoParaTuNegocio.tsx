@@ -45,7 +45,11 @@ const data = {
 };
 
 const TodoParaTuNegocio = () => (
-  <PageLayout title="Todo para Tu Negocio | IORANA Digital" description="Estrategia digital 360° para empresas. SEO, PPC, contenidos, automatizaciones, web y branding con un solo partner digital.">
+  <PageLayout
+    title="Todo para Tu Negocio – Estrategia 360° | Iorana Digital"
+    description="Estrategia digital 360° en Asturias. SEO, PPC, contenidos, automatizaciones, desarrollo web y branding con un solo partner digital."
+    canonical="https://iorana.digital/soluciones/todo-para-tu-negocio"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );

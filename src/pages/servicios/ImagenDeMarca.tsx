@@ -45,7 +45,11 @@ const data = {
 };
 
 const ImagenDeMarca = () => (
-  <PageLayout title="Imagen de Marca | IORANA Digital" description="Diseño de identidad visual y branding profesional. Logotipos, manual de marca, papelería corporativa y estrategia de posicionamiento.">
+  <PageLayout
+    title="Imagen de Marca | Iorana Digital"
+    description="Diseño de identidad visual y branding profesional en Asturias. Logotipos, manual de marca, papelería corporativa y estrategia de posicionamiento."
+    canonical="https://iorana.digital/servicios/imagen-de-marca"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );

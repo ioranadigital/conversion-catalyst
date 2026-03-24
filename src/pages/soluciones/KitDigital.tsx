@@ -45,7 +45,11 @@ const data = {
 };
 
 const KitDigital = () => (
-  <PageLayout title="Kit Digital | IORANA Digital" description="Agente Digitalizador homologado del Kit Digital. Digitaliza tu pyme o negocio con ayudas de hasta 12.000€ del Gobierno de España.">
+  <PageLayout
+    title="Kit Digital – Agente Digitalizador | Iorana Digital"
+    description="Agente Digitalizador homologado del Kit Digital en Asturias. Digitaliza tu pyme o negocio con ayudas de hasta 12.000€ del Gobierno de España."
+    canonical="https://iorana.digital/soluciones/kit-digital"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );

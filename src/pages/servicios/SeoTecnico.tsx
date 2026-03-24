@@ -45,7 +45,11 @@ const data = {
 };
 
 const SeoTecnico = () => (
-  <PageLayout title="SEO Técnico & On-Page | IORANA Digital" description="Servicios de SEO técnico y on-page para empresas. Auditorías, Core Web Vitals, schema markup y optimización completa.">
+  <PageLayout
+    title="SEO Técnico & On-Page | Iorana Digital"
+    description="Servicios de SEO técnico y on-page en Asturias. Auditorías, Core Web Vitals, schema markup y optimización completa para posicionar tu web en Google."
+    canonical="https://iorana.digital/servicios/seo-tecnico"
+  >
     <ServicePageTemplate data={data} />
   </PageLayout>
 );
