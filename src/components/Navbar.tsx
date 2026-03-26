@@ -9,7 +9,7 @@ const serviceLinks = [
   { label: 'Content Marketing', href: '/servicios/content-marketing' },
   { label: 'Automatizaciones', href: '/servicios/automatizaciones' },
   { label: 'Desarrollo Web', href: '/servicios/desarrollo-web' },
-  { label: 'Imagen de Marca', href: '/servicios/imagen-de-marca' },
+//{ label: 'Imagen de Marca', href: '/servicios/imagen-de-marca' },
 ];
 
 const solutionLinks = [
