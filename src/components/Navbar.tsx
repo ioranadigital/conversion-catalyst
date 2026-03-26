@@ -9,11 +9,11 @@ const serviceLinks = [
   { label: 'Content Marketing', href: '/servicios/content-marketing' },
   { label: 'Automatizaciones', href: '/servicios/automatizaciones' },
   { label: 'Desarrollo Web', href: '/servicios/desarrollo-web' },
-//{ label: 'Imagen de Marca', href: '/servicios/imagen-de-marca' },
+{ label: 'Imagen de Marca', href: '/servicios/imagen-de-marca' },
 ];
 
 const solutionLinks = [
-  { label: 'Kit Digital', href: '/soluciones/kit-digital' },
+//{ label: 'Kit Digital', href: '/soluciones/kit-digital' },
   { label: 'Diseño de Landings', href: '/soluciones/diseno-de-landings' },
   { label: 'Todo para Tu Negocio', href: '/soluciones/todo-para-tu-negocio' },
   { label: 'Informe Gratuito', href: '/soluciones/como-esta-optimizado-mi-web' },
