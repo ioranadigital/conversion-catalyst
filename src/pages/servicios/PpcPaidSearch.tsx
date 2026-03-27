@@ -1,57 +1,57 @@
-import PageLayout from "@/components/PageLayout";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
-import { MousePointerClick } from "lucide-react";
+"use client";
 
-const data = {
-  icon: MousePointerClick,
-  title: "PPC & Paid Search",
-  subtitle: "Campañas de pago que generan leads cualificados desde el día 1. Maximizamos tu ROAS con gestión experta en Google Ads y Meta Ads.",
-  includes: [
-    "Estrategia y configuración de Google Ads (Search, Display, YouTube)",
-    "Campañas en Meta Ads (Facebook e Instagram) con segmentación avanzada",
-    "Remarketing y audiencias lookalike para maximizar conversiones",
-    "Optimización continua de pujas, CPA y ROAS",
-    "A/B testing de creatividades, copies y landing pages",
-    "Reporting semanal con dashboards en tiempo real",
+import React from "react";
+// Eliminamos PageLayout para evitar el doble Footer/Navbar
+import ServicePageTemplate from "../../components/ServicePageTemplate";
+
+const serviceData = {
+  title: "PPC & Paid Search Experto",
+  subtitle: "Campañas que generan leads desde el día 1",
+  description: 
+    "Maximizamos tu retorno de inversión publicitaria (ROAS) mediante una gestión experta en Google Ads y Meta Ads, enfocada en captar tráfico cualificado y convertirlo en clientes.",
+  benefits: [
+    "Estrategia integral en Google Ads (Búsqueda, Display y YouTube)",
+    "Campañas en Meta Ads con segmentación avanzada de audiencias",
+    "Remarketing estratégico para recuperar usuarios interesados",
+    "Optimización diaria de pujas, CPA y rendimiento de anuncios",
+    "A/B testing constante de creatividades y landing pages",
+    "Reporting detallado con dashboards de métricas en tiempo real"
   ],
-  whyMatters: {
-    title: "¿Por qué invertir en PPC?",
-    desc: "",
-    points: [
-      "El PPC te da resultados inmediatos con un coste de adquisición predecible",
-      "Complementa tu estrategia SEO: captas demanda mientras construyes autoridad orgánica",
-      "La data de campañas paid es invaluable para informar tu estrategia de contenido",
-    ],
-  },
-  process: [
-    { step: "1", title: "Análisis y Estrategia", desc: "Estudiamos tu mercado, competidores y buyer persona para diseñar una estructura de campañas que maximice el ROI." },
-    { step: "2", title: "Configuración de Campañas", desc: "Creamos cuentas, campañas y grupos de anuncios con keyword research, copies persuasivos y extensiones optimizadas." },
-    { step: "3", title: "Landing Pages", desc: "Diseñamos o optimizamos landing pages específicas para cada campaña, maximizando la tasa de conversión." },
-    { step: "4", title: "Optimización Continua", desc: "Ajustamos pujas, negativizamos keywords, testamos creatividades y escalamos lo que funciona en ciclos semanales." },
-    { step: "5", title: "Reporting y Escalado", desc: "Reportes semanales con métricas clave. Identificamos oportunidades de escalar presupuesto en canales rentables." },
-  ],
-  metrics: [
-    { value: "4.2x", label: "ROAS promedio" },
+  stats: [
+    { value: "4.2x", label: "ROAS Promedio" },
     { value: "-45%", label: "Reducción CPA" },
-    { value: "+180%", label: "Leads cualificados" },
-    { value: "98%", label: "Clientes satisfechos" },
+    { value: "+180%", label: "Leads Cualificados" },
+    { value: "98%", label: "Clientes Satisfechos" }
   ],
-  faqs: [
-    { q: "¿Cuánto presupuesto necesito para empezar con PPC?", a: "Recomendamos un mínimo de 1.500€/mes en inversión publicitaria para obtener datos suficientes que permitan optimizar. El presupuesto óptimo depende de tu sector y objetivos." },
-    { q: "¿Google Ads o Meta Ads? ¿Cuál es mejor?", a: "Depende de tu negocio. Google Ads captura demanda existente (usuarios buscando activamente). Meta Ads genera demanda y es excelente para awareness y remarketing. Generalmente recomendamos una combinación." },
-    { q: "¿Cuánto tiempo hasta ver resultados?", a: "Los primeros resultados se ven en 1-2 semanas. Sin embargo, la optimización real comienza tras 4-6 semanas cuando tenemos suficientes datos para tomar decisiones basadas en evidencia." },
-    { q: "¿Gestionáis también las creatividades?", a: "Sí, nuestro equipo crea copies, diseños de anuncios y landing pages. También trabajamos con tu equipo de diseño si lo prefieres." },
-  ],
+  process: [
+    { 
+      title: "Análisis y Estrategia", 
+      desc: "Diseñamos una estructura de campañas a medida para maximizar tu ROI." 
+    },
+    { 
+      title: "Configuración Técnica", 
+      desc: "Keyword research profundo y redacción de anuncios altamente persuasivos." 
+    },
+    { 
+      title: "Optimización de Landings", 
+      desc: "Diseñamos páginas de destino específicas para elevar la tasa de conversión." 
+    },
+    { 
+      title: "Gestión Continua", 
+      desc: "Ajustamos pujas y negativizamos keywords en ciclos de optimización semanal." 
+    },
+    { 
+      title: "Reporting y Escalado", 
+      desc: "Identificamos canales rentables para escalar tu inversión de forma segura." 
+    }
+  ]
 };
 
 const PpcPaidSearch = () => (
-  <PageLayout
-    title="PPC & Paid Search | Iorana Digital"
-    description="Gestión profesional de Google Ads y Meta Ads en Asturias. Campañas PPC orientadas a maximizar tu ROAS y generar leads cualificados."
-    canonical="https://iorana.digital/servicios/ppc-paid-search"
-  >
-    <ServicePageTemplate data={data} />
-  </PageLayout>
+  // Añadimos un padding-top (pt-20) para que el Navbar fijo no tape el título
+  <div className="pt-20">
+    <ServicePageTemplate {...serviceData} />
+  </div>
 );
 
 export default PpcPaidSearch;
