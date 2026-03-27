@@ -2,7 +2,7 @@
 
 import React from "react";
 // Eliminamos PageLayout para evitar el doble Footer/Navbar
-import ServicePageTemplate from "../../components/ServicePageTemplate";
+import ServicePageTemplate from "../../components/ServicePageTemplate"; 
 
 const serviceData = {
   title: "PPC & Paid Search Experto",
